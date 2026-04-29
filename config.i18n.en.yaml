@@ -646,8 +646,9 @@ widgets:
         bottom: 0
         right: 8
   weather:
-    type: "yasb.weather.WeatherWidget"
+    type: "yasb.weather_localized.WeatherLocalizedWidget"
     options:
+      locale: "en"
       label: "<span>{icon}</span> {temp}, {feelslike}"
       label_alt: "\udb84\udcc3 {min_temp}, \udb84\udcc2 {max_temp}"
       api_key: "1ef9d313a55c4164b76133933252005"

@@ -48,34 +48,51 @@ To add a new language variant, copy `config.yaml`, customize the widget labels f
 
 This theme includes a **custom weather widget** with multi-language support (`widgets/weather_localized.py`).
 
-⚠️ **Note:** The custom widget works only if YASB is **installed from source** (`pip install yasb`), not from the pre-built executable. The frozen YASB installation cannot load custom widgets.
+The custom widget extends YASB's built-in weather widget and translates weather descriptions based on the configured locale.
 
-### For source-based YASB installations:
+### Setup
 
 1. **Locate your YASB installation directory**:
    ```bash
-   python -c "import yasb; import os; print(os.path.dirname(yasb.__file__))"
+   python -c "import site; print([p for p in site.getsitepackages() if 'site-packages' in p][0])"
    ```
 
-2. **Copy the widget and locales**:
+2. **Copy the widget**:
    ```bash
-   cp widgets/weather_localized.py <YASB>/src/core/widgets/yasb/
-   cp -r locales <YASB_CONFIG_DIR>/
+   # From this repository
+   cp widgets/weather_localized.py <SITE_PACKAGES>/core/widgets/yasb/
    ```
 
-3. **Enable in config**:
+3. **Copy locales** (if not already in your YASB config directory):
+   ```bash
+   # Linux/macOS
+   cp -r locales ~/.config/yasb/
+   
+   # Windows
+   Copy-Item -Recurse "locales" "$env:APPDATA\yasb\"
+   ```
+
+4. **Enable in config**:
    ```yaml
    weather:
      type: "yasb.weather_localized.WeatherLocalizedWidget"
      options:
        locale: "pl"  # or "en"
+       # ... other weather options
    ```
 
-4. **Restart YASB**.
+5. **Restart YASB** — the widget will load and use locale translations from `locales/<lang>.json`.
 
-### For executable/frozen YASB:
+### Supported Languages
 
-The built-in weather widget will be used (English only). This is a limitation of the frozen application format.
+- **en** — English
+- **pl** — Polish
+
+### Adding a Language
+
+1. Create `locales/<lang>.json` with weather condition translations
+2. Update config to use `locale: "<lang>"`
+3. Restart YASB
 
 ## Contribute
 Suggestions, icon updates, and improvements are welcome via GitHub Issues or Pull Requests.

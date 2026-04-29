@@ -18,9 +18,39 @@ This will print something like: `/usr/lib/python3.10/site-packages/yasb` or `C:\
 
 **Save this path — you'll need it below.**
 
-### Step 3: Copy Locale Files (Optional)
+### Step 3: Install Source-Based YASB
 
-If you're using YASB from source (not the pre-built executable), copy locales:
+For custom widget support, install YASB from GitHub source:
+
+**Linux/macOS:**
+```bash
+pip install git+https://github.com/amnweb/yasb.git
+```
+
+**Windows (PowerShell):**
+```powershell
+pip install git+https://github.com/amnweb/yasb.git
+```
+
+### Step 4: Install the Custom Localized Weather Widget
+
+Copy the widget file to your YASB installation's site-packages:
+
+**Linux/macOS:**
+```bash
+SITE_PACKAGES=$(python -c "import site; print([p for p in site.getsitepackages() if 'site-packages' in p][0])")
+cp widgets/weather_localized.py "$SITE_PACKAGES/core/widgets/yasb/"
+```
+
+**Windows (PowerShell):**
+```powershell
+$SITE_PACKAGES = python -c "import site; print([p for p in site.getsitepackages() if 'site-packages' in p][0])"
+Copy-Item "widgets/weather_localized.py" "$SITE_PACKAGES\core\widgets\yasb\"
+```
+
+### Step 5: Copy Locale Files
+
+Copy the locales folder to your YASB configuration directory:
 
 **Linux/macOS:**
 ```bash
@@ -31,8 +61,6 @@ cp -r locales ~/.config/yasb/
 ```powershell
 Copy-Item -Recurse "locales" "$env:APPDATA\yasb\"
 ```
-
-*Note: The custom weather widget is not usable with frozen/executable YASB installations.*
 
 ### Step 5: Configure YASB
 
