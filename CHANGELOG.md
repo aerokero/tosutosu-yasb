@@ -8,4 +8,3 @@ All notable changes to this project will be documented in this file.
 - Introduced CSS variables for easier theming
 - Added repository templates and CI scaffold
 - Added localized config variants: `config.i18n.en.yaml` and `config.i18n.pl.yaml`
-- Added i18n helper script and translation management system

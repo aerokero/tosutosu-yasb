@@ -36,17 +36,13 @@ Do not commit your machine-specific `launchpad/apps.json`. Instead, copy `launch
 
 See `CHANGELOG.md` for upgrade notes.
 
-## Localization
+## Language Variants
 
-This theme includes generated configs for English and Polish:
+Choose from pre-configured language variants:
 - `config.i18n.en.yaml` — English widget labels
 - `config.i18n.pl.yaml` — Polish widget labels
 
-Translations are maintained in `i18n/translations.json`. To update or add languages:
-
-1. Edit `i18n/translations.json`
-2. Run `python scripts/apply_i18n.py <lang>` to generate `config.i18n.<lang>.yaml`
-3. Test and commit the new variant
+To add a new language variant, copy `config.yaml`, customize the widget labels for your language, and commit it as `config.i18n.<lang>.yaml`.
 
 ## Contribute
 Suggestions, icon updates, and improvements are welcome via GitHub Issues or Pull Requests.
