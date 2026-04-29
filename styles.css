@@ -1,0 +1,1891 @@
+:root {
+	--white: #e0e0e0;
+    --text: #f0f0f0;
+	--app-background: rgb(35, 35, 35);
+    --widget-background: rgb(40, 40, 40);
+	--clock-background: rgb(79, 79, 79);
+	--active-app-background: rgb(58, 58, 58);
+}
+
+* {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.yasb-bar {
+	background-color: rgb(23, 23, 23);
+    margin: -1px -1px 0px -1px;
+	border-radius: 2px;
+    border: 1px solid #34343a;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.widget {
+    padding: 4px;
+    margin: 1;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+.icon {
+	font-family: "JetBrainsMono NFP";
+    font-size: 16px;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+.widget .label {
+	font-family: "JetBrainsMono NFP";
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.tooltip {
+    background-color: var(--app-background);
+    border: 1px solid #505050;
+    border-radius: 12px;
+    color: var(--text);
+    padding: 6px 12px;
+    font-size: 12px;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* Global context menu style */
+.context-menu,
+.context-menu .menu-checkbox {
+    background-color: var(--app-background);
+    border: none;
+    padding: 4px 0px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    color: var(--text);
+}
+.context-menu::right-arrow {
+    width: 8px;
+    height: 8px;
+    padding-right: 24px;
+}
+.context-menu::item,
+.context-menu .menu-checkbox {
+    background-color: transparent;
+    padding: 6px 12px;
+    margin: 2px 6px;
+    border-radius: 6px;
+    min-width: 100px;
+}
+.context-menu::item:selected,
+.context-menu .menu-checkbox:hover {
+    background-color: var(--app-background);
+    color: var(--text);
+}
+.context-menu::separator {
+    height: 1px;
+    background-color: #404040;
+    margin: 4px 8px;
+}
+.context-menu::item:disabled {
+    color: #666666;
+    background-color: transparent;
+}
+.context-menu .menu-checkbox .checkbox {
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+    margin: 0;
+    color: var(--text);
+    font-family: 'Segoe UI'
+}
+.context-menu .submenu::item:disabled {
+    margin: 0;
+    padding-left: 16px;
+}
+.context-menu .menu-checkbox .checkbox:unchecked {
+    color: #999
+}
+.context-menu .menu-checkbox .checkbox::indicator {
+    width: 12px;
+    height: 12px;
+    margin-left: 0px;
+    margin-right: 8px;
+}
+.context-menu .menu-checkbox .checkbox::indicator:unchecked {
+    background: var(--app-background);
+    border-radius: 2px;
+}
+.context-menu .menu-checkbox .checkbox::indicator:checked {
+    background: var(--app-background);
+    border-radius: 2px;
+}
+.context-menu .menu-checkbox .checkbox:focus {
+    outline: none;
+}
+.context-menu::item:checked {
+    background-color: var(--app-background);
+    color: var(--text);
+}
+
+/* Komorebi Active Layout Setting */
+.komorebi-active-layout {}
+.komorebi-active-layout .label {}
+
+/* Komorebi Layout Menu Setting */
+.komorebi-layout-menu {
+    background-color: var(--app-background);
+}
+.komorebi-layout-menu .menu-item {
+    padding: 8px 16px;
+    font-size: 12px;
+    color: #ffffff; 
+    font-weight: 600;
+}
+.komorebi-layout-menu .menu-item-icon {
+    color: #ffffff;
+    font-size: 16px;
+}
+.komorebi-layout-menu .menu-item-text {
+    padding-left:4px;
+    font-size: 12px;
+} 
+.komorebi-layout-menu .menu-item:hover {
+    background-color:rgba(128, 130, 158, 0.15);
+    color: #fff;
+} 
+.komorebi-layout-menu .separator {
+    max-height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* KOMOREBI-WORKSPACES Setting */
+
+.komorebi-workspaces .widget-container {
+    margin: 1px 1 1px 1;
+    background-color: var(--widget-background);
+    border-radius: 18px;
+    border: 2px solid #34343a;	
+}
+
+.komorebi-workspaces .offline-status {
+    color: var(--overlay2);
+    padding: 0 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.komorebi-workspaces .ws-btn {
+    border: none;
+    background-color: #9cd1dd;
+    margin: 0px 4px;
+    padding: 0;
+    color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    height: 10px;
+    width: 10px;
+}
+.komorebi-workspaces .ws-btn:hover {
+    background-color: #91b2e7;
+}
+.komorebi-workspaces .ws-btn.populated {
+    background-color: var(--red);
+}
+.komorebi-workspaces .ws-btn.active {
+    background-color: var(--white); 
+    width: 36px;
+    height: 10px;
+    border-radius: 12px;
+}
+
+ 
+
+/* BLUETOOTH and MICROPHONE Setting */
+.brightness-widget .widget-container {
+	min-width: 32px;
+	max-width: 200px;
+}
+.bluetooth-widget {}
+.bluetooth-widget .widget-container {
+	min-width: 32px;
+	max-width: 200px;
+}
+.bluetooth-widget .label {}
+.bluetooth-widget .label.alt {}
+.bluetooth-widget .icon {}
+
+.microphone-widget {}
+.microphone-widget .widget-container {
+	min-width: 32px;
+	max-width: 32px;
+}
+.microphone-widget .label {}
+.microphone-widget .label.alt {}
+.microphone-widget .icon {}
+.microphone-widget .label.muted {}
+.microphone-widget .icon.muted {}
+.microphone-slider {
+    border: none;
+}
+.microphone-slider::groove {}
+.microphone-slider::handle{} 
+.microphone-menu {
+    background-color: var(--app-background);
+}
+/* Match volume menu item styling */
+.microphone-menu .device,
+.microphone-container .device {
+    border: none;
+    padding:6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.microphone-menu .device.selected,
+.microphone-container .device.selected {
+    background-color: rgba(255, 255, 255, 0.085);
+}
+.microphone-menu .device:hover,
+.microphone-container .device:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Microphone progress bar styles if enabled */
+.microphone-widget .progress-circle {} 
+
+/* CAVA Setting */
+.cava-widget {
+    padding: 0;
+    margin: 0;
+}
+.cava-widget .widget-container {
+    margin: 0px 0 0px 0;
+    background-color: var(--widget-background);
+    border-radius: 18px;
+    border: 2px solid #34343a;
+}
+
+/* POMODORO Setting */
+.pomodoro-widget .widget-container {
+}
+.pomodoro-widget .icon {
+}
+.pomodoro-widget .label.paused,
+.pomodoro-widget .icon.paused {
+    color: #7d7e8b;
+}
+.pomodoro-widget .label.work,
+.pomodoro-widget .icon.work {
+    color: #a6e3a1;
+}
+.pomodoro-widget .label.break,
+.pomodoro-widget .icon.break {
+    color: #89b4fa;
+}
+
+/* Pomodoro menu styling */
+.pomodoro-menu {
+    border-radius: 8px;
+}
+.pomodoro-menu .header {
+    font-size: 16px;
+    font-weight: 600;
+    max-height: 0px;
+    color: #ffffff;
+}
+.pomodoro-menu .status {
+    font-size: 18px;
+    font-weight: 600;
+    color: #cdd6f4;
+}
+.pomodoro-menu .session {
+    font-size: 12px;
+    color: #a6adc8;
+}
+.pomodoro-menu .button {
+    background-color: rgb(61, 61, 61);
+    color: #cdd6f4;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+.pomodoro-menu .button.start {
+    background-color: rgb(61, 61, 61);
+}
+.pomodoro-menu .button.reset {
+    background-color: rgb(61, 61, 61);
+}
+.pomodoro-menu .button:hover {
+    background-color: rgba(255, 255, 255, 0.158);
+}
+.pomodoro-menu .button.pause {
+    background-color: #a6e3a1;
+    color: #1e1e2e;
+}
+.pomodoro-menu .button:pressed {
+    background-color: #5a5b6e;
+}
+
+/* WIFI Setting */
+.wifi-widget .icon{
+    color: var(--text) !important;
+}
+
+/* CPU MEMORY Setting */
+.cpu-widget {}
+.cpu-widget .widget-container {}
+.cpu-widget .widget-container .label {}
+.cpu-widget .widget-container .label.alt {}
+.cpu-widget .widget-container .icon {}
+.cpu-widget .label.status-low {}
+.cpu-widget .label.status-medium {}
+.cpu-widget .label.status-high {}
+.cpu-widget .label.status-critical {}
+/* CPU progress bar styles if enabled */
+.cpu-widget .progress-circle {} 
+
+.memory-widget {}
+.memory-widget .widget-container {
+}
+.memory-widget .label {
+	margin-right: 8px;
+}
+.memory-widget .label.alt {
+	margin-right: 8px;
+}
+.memory-widget .icon {
+	margin-left: 8px;
+}
+.memory-widget .label.status-low {}
+.memory-widget .label.status-medium {}
+.memory-widget .label.status-high {}
+.memory-widget .label.status-critical {}
+/* Memory progress bar styles if enabled */
+.memory-widget .progress-circle {} 
+
+/*DISK WIDGET*/
+
+.disk-widget .widget-container {
+    background-color: var(--widget-background);
+    border-radius: 18px;
+	border: 2px solid #34343a;
+}
+
+.disk-widget {
+    padding: 0 6px 0 6px;
+}
+.disk-group {
+    background-color:var(--app-background); 
+}
+.disk-group-row {
+    min-width: 220px;
+    max-width: 220px;
+    max-height: 60px;
+    margin: 0;
+    padding: 0;
+    border-radius: 6px;
+    border: 1px solid rgba(128, 128, 128, 0);
+}
+.disk-group-row:hover {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.disk-group-label-bar{
+    max-height:12px;
+    border:0px solid rgba(128, 128, 128, 0);
+    background-color: rgb(230, 230, 230);
+    border-radius: 4px;
+}
+.disk-group-label-bar::chunk{
+    background-color: rgba(0, 112, 203, 0.7);
+    border-radius: 4px;
+}
+.disk-group-label {
+}
+.disk-group-label-size {
+    color: #666879;
+}
+
+/* CLOCK and CALENDAR Settings */
+
+.clock-widget {
+	margin-right: 10px;
+}
+/* If you suing class_name option, you can add custom styles here */
+.clock-widget.your_class {}
+.clock-widget .widget-container .label {}
+.clock-widget .widget-container .label.alt {}
+.clock-widget .widget-container .icon {}
+.clock-widget .icon {}
+.clock-widget .icon.clock_02 {}
+.clock-widget .label.clock_15 {}
+
+.clock-widget .widget-container {
+    background-color: rgb(79, 79, 79);
+    border-radius: 18px;
+	border: 2px solid #6c6c6c;
+}
+
+.calendar {
+    background-color: rgba(32, 32, 32, 0.9);
+}
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+    background-color: rgba(32, 32, 32, 0.9);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;  
+}
+.calendar .calendar-table::item:selected {
+    color: #000000;
+    background-color: rgb(89, 89, 89);
+    border-radius: 12px;
+}
+.calendar .day-label {
+    margin-top: 20px;
+	color: #404040;
+}
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label,
+.calendar .week-label,
+.calendar .holiday-label {
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    min-width: 180px;
+    max-width: 180px;
+}
+.calendar .week-label,
+.calendar .holiday-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(162, 177, 196, 0.85);
+}
+.calendar .holiday-label {
+    color: rgba(162, 177, 196, 0.85);
+    font-weight: 700;
+}
+.calendar .month-label {
+    font-weight: normal;
+}
+.calendar .date-label {
+    font-size: 88px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    margin-top: -20px;
+}
+
+/* POWER Settings */
+.power-menu-widget .label {
+    font-size: 14px;
+}
+.power-menu-popup {
+    background-color: transparent
+}
+.power-menu-popup .button {
+    padding: 0;
+    width: 180px;
+    height: 230px;
+    border-radius: 8px;
+    background-color: var(--crust);
+    color: var(--text);
+    border-left: 10px solid rgba(58, 59, 83, 0);
+    border-right: 10px solid rgba(58, 59, 83, 0);
+    border-top: 10px solid rgba(58, 59, 83, 0);
+    border-bottom: 10px solid rgba(58, 59, 83, 0);
+    margin: 0px;
+}
+.power-menu-popup .button.hover {
+    background-color: var(--base);
+    border-left: 10px solid var(--base);
+    border-right: 10px solid var(--base);
+    border-top: 10px solid var(--base);
+    border-bottom: 10px solid var(--base);
+}
+.power-menu-popup .button .label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--overlay2)
+}
+.power-menu-popup .button .icon {
+    font-size: 64px;
+    padding-top: 32px;
+    color: var(--surface2)
+}
+.power-menu-popup .button.cancel .icon {
+    padding: 0;
+    margin: 0;
+}
+.power-menu-popup .button.cancel .label {
+    margin: 0;
+}
+.power-menu-popup .button.cancel {
+    height: 32px;
+    border-radius: 4px;
+}
+.power-menu-popup .button.hover .label,
+.power-menu-popup .button.hover .icon {
+    color: var(--yellow);
+}
+.uptime {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--overlay2);
+    font-weight: 600;
+}
+
+/* WHKD Settings */
+.whkd-widget {
+}
+
+.whkd-widget .widget-container {
+    background-color: var(--widget-background);
+    border-radius: 18px;
+	border: 2px solid #34343a;
+}
+
+.whkd-widget .icon {
+}
+.whkd-popup .edit-config-button {
+    background-color:#1743a1;
+    color: #ffffff;
+    padding: 4px 8px 6px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    font-family: 'Segoe UI';
+}
+.whkd-popup .keybind-buttons-container {
+    min-width: 240px;
+}
+.whkd-popup .keybind-button {
+    background-color: #343538;
+    color: white;
+    padding: 4px 8px 6px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px inset #4f5055;
+    border-bottom: 2px inset #4f5055;
+    border-radius: 4px;
+    font-family: 'Segoe UI';
+}
+.whkd-popup .keybind-button.special {
+    background-color: #343538;
+}
+.whkd-popup .keybind-row:hover{
+    background-color: rgba(136, 138, 155, 0.2);
+    border-radius: 8px;
+}
+.whkd-popup .plus-separator {
+    padding: 0 0px;
+    border:none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color:transparent
+}
+.whkd-popup .filter-input {
+    padding: 0 8px 2px 8px;
+    font-size: 14px;
+    font-family: 'Segoe UI';
+    border: 1px solid #2e2e2e;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    background-color: #2e2e2e;
+    min-height: 32px;
+}
+.whkd-popup .filter-input:focus {
+    border: 1px solid #0078D4;
+}
+.whkd-popup .keybind-command {
+    font-size: 14px;
+}
+.whkd-popup .keybind-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    padding: 8px 0;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+/* VOLUME Settings */
+.volume-widget {
+}
+.volume-widget .widget-container{
+	min-width: 90px;
+    max-width: 90px;
+}
+.volume-widget .icon {
+} 
+.volume-slider {
+    border: none;
+}
+.volume-slider::groove {}
+.volume-slider::handle{} 
+.audio-menu {
+    background-color: var(--app-background); 
+}
+.audio-container .device {
+    border: none;
+    padding:6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.audio-container .device.selected {
+    background-color: rgba(255, 255, 255, 0.085);
+}
+.audio-container .device:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+/* LANGUAGE Settings */
+.language-widget {
+    padding-left: 0;
+}
+.language-widget .widget-container{
+    border-radius: 18px;
+}
+.language-widget .icon {
+    color: var(--white);
+    margin-right: 4px;
+}
+
+/* WEATHER Settings */
+.weather-widget .icon {
+    margin: 0 4px 1px 0;
+    color: var(--text);
+}
+
+/* Weather card style */
+.weather-card {
+    background-color: var(--app-background);
+}
+.weather-card-today {
+    border: 1px solid #282936;
+    border-radius: 8px;
+}
+.weather-card-today .label {
+    font-size: 12px;
+}
+.weather-card-today .label.location {
+    font-size: 24px;
+    font-weight: 700;
+}
+.weather-card-today .label.alert {
+    font-size: 12px;
+    font-weight: 700;
+    border: 1px solid rgba(247, 209, 42, 0.1);
+    color: rgba(196, 181, 162, 0.85);
+    border-radius: 6px;
+    padding: 5px 0;
+}
+.weather-card-day {
+    border: 1px solid #45475a;
+    border-radius: 8px;
+}
+
+.weather-card-day.active {
+    background-color: rgba(40, 40, 60, 0.6);
+    border: 1px solid rgba(50, 50, 75, 1);
+}
+
+.weather-card-day:hover {
+    background-color: rgba(40, 40, 60, 0.6);
+}
+
+.weather-card-day .label {
+    font-size: 12px;
+}
+
+.weather-card .hourly-container {
+    border: 1px solid #282936;
+    border-radius: 8px;
+    min-height: 150px;
+}
+
+.weather-card .hourly-data {
+    /* font-family: 'Segoe UI';*/
+    /* color: cyan;*/ /* <- Font color */
+    background-color: #FAE93F; /* <- Curve color */
+    font-size: 12px;
+    font-weight: regular;
+}
+
+.weather-card .hourly-data.temperature {
+    background-color: #FAE93F; /* Temperature curve & line color */
+}
+
+.weather-card .hourly-data.rain {
+    background-color: #4A90E2; /* Rain curve & line color */
+}
+
+.weather-card .hourly-data.snow {
+    background-color: #A0C4FF; /* Snow curve & line color */
+}
+
+.weather-card .hourly-data .hourly-rain-animation {
+    color: rgba(150, 200, 255, 40); /* Rain color */
+    background-color: rgba(0, 0, 0, 0.1); /* Rain background color */
+}
+
+.weather-card .hourly-data .hourly-snow-animation {
+    color: rgba(255, 255, 255, 150); /* Snow color */
+    background-color: rgba(0, 0, 0, 0.1); /* Snow background color */
+}
+
+/* Hourly forecast toggle buttons */
+.weather-card .hourly-data-buttons {
+    margin: 0px;
+}
+.weather-card .hourly-data-button {
+    border-radius: 4px;
+    min-height: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.3);
+    border: 1px solid transparent;
+}
+.weather-card .hourly-data-button.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* TASKBAR Settings */
+.taskbar-widget {
+    padding: 0;
+    margin: 1;
+    border: none;
+}
+.taskbar-widget .app-icon {
+    padding: 0px;
+    border: none;
+    margin: 0;    
+}
+.taskbar-widget .app-icon.foreground{
+    background-color: rgb(58, 58, 58);
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+}
+
+.taskbar-widget .app-container {
+    margin: 2px 1px;
+    border-radius: 10px;
+    padding: 0 4px;
+}
+
+.taskbar-widget .app-container.foreground {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+.taskbar-widget .app-container.flashing {
+    background-color: rgba(255, 106, 106, 0.63);
+}
+
+.taskbar-widget .app-container .app-title {
+    padding-left: 4px;
+}
+
+/* ACTIVE WINDOW Settings */
+.active-window-widget .icon {
+    padding: 0 0px;
+}
+
+.active-window-widget {
+    padding-right: -6;
+}
+.active-window-widget .widget-container {
+    padding: auto;
+    border-radius: 18px;
+}
+
+/* HOME Settings */
+.home-widget {   
+    padding: 0 4px 0 12px;
+	font-size: 12px;
+}
+
+.home-widget .icon:hover {
+    color: #ffffff;
+}
+.home-menu {
+    background-color: rgb(38, 39, 38);
+}
+.home-menu .menu-item {
+    padding: 12px 48px 12px 16px;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    font-weight: 600;
+
+}
+.home-menu .menu-item:hover {
+    background-color: rgba(157, 180, 141, 0.116);
+    color: #fff;
+}
+.home-menu .separator {
+    max-height: 1px;
+    background-color: rgba(157, 180, 141, 0.116);
+}
+
+/* MEDIA Settings */
+.media-widget {
+}
+
+.media-widget .widget-container {
+    padding-left: 8;
+	padding-right: 4;
+}
+.media-widget .label {
+	color: var(--text);
+    padding: 0px;
+	padding-right: 4px;
+	font-size: 12px;
+	font-family: "Segoe UI";
+	min-width: 180px;
+}
+.media-widget .btn {
+	color: var(--white);
+	padding: 0 4px;
+	margin: 0;
+	font-family: "JetBrainsMono NFP";
+    font-size: 12px;
+}
+.media-widget .btn:hover {
+	color: #babfd3;
+}
+.media-widget .btn.play {
+	font-size: 16px;
+}
+.media-widget .btn.disabled:hover,
+.media-widget .btn.disabled {
+	color: var(--surface1);
+}
+
+/* MEDIA MENU Settings */
+.media-menu {
+    min-width: 420px;
+    max-width: 420px;
+    background-color: var(--widget-background);
+	border-radius: 12px;
+	border: 1px solid rgb(80, 80, 80);
+}
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px;
+	margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.media-menu .artist {
+    font-size: 13px;
+    color: #868686;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+.media-menu .source {
+    font-size: 14px;
+    color: #000;
+    font-weight: light;
+    border-radius: 3px;
+    background-color: #bac2de;
+    padding: 2px 4px;
+
+}
+/* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase. 
+Example: "Windows Media" becomes "windows-media" */
+.media-menu .source.firefox {
+    background-color: #ff583b;
+    color: #ffffff;
+}
+.media-menu .source.spotify {
+    background-color: #199143;
+    color: #ffffff;
+}
+.media-menu .source.edge {
+    background-color: #0078d4;
+    color: #ffffff;
+}
+.media-menu .source.windows-media {
+    background-color: #0078d4;
+    color: #ffffff;
+}
+
+.media-menu .btn {
+    font-family: "Segoe Fluent Icons";
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 2px 0px 2px;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    border-radius: 20px;
+}
+.media-menu .btn.prev {
+    margin-left: 10px;
+}
+.media-menu .btn:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.media-menu .btn.play {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 20px
+}
+.media-menu .btn.disabled:hover,
+.media-menu .btn.disabled {
+    color: #4e525c;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.media-menu .playback-time {
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #7f849c;
+    margin-top: 20px;
+    min-width: 100px;
+}
+.media-menu .progress-slider {
+    height: 10px;
+    margin: 5px 4px;
+    border-radius: 3px;
+}
+.media-menu .progress-slider::groove {
+    background: transparent;
+    height: 2px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+
+}
+.media-menu .progress-slider::groove:hover {
+    background: transparent;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.media-menu .progress-slider::sub-page {
+    background: white;
+    border-radius: 3px;
+    height: 4px;
+}
+
+/* NOTIFICATION Settings */
+.notification-widget .icon {
+}
+.notification-widget .icon.new-notification {
+}
+.notification-widget .label.new-notification {
+}
+
+/* NOTES Settings */
+.notes-widget .widget-container {
+    padding: 0;
+	min-width: 64px;
+}
+.notes-widget .label {
+   color: #dbfeb4;
+   margin-right: 13px;
+}
+.notes-widget .icon {
+   color: #dbfeb4;
+   margin-left: 13px;
+}
+.notes-widget {
+    padding: 0 2px 0 2px;
+}
+
+/* Notes Widget Menu */
+.notes-menu {
+    min-width: 400px;
+    max-width: 400px;
+    background-color: var(--app-background);
+}
+.notes-menu .note-item {
+    background-color:transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.notes-menu .note-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.notes-menu .note-item .icon {
+    font-size: 16px;
+    padding: 0 4px;
+}
+.notes-menu .delete-button {
+    color: #ff6b6b;
+    background: transparent;
+    border: none;
+    font-size: 8px;
+    padding: 7px 8px;
+    border-radius: 3px;
+}
+.notes-menu .delete-button:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+.notes-menu .copy-button {
+    color: #babfd3;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+.notes-menu .copy-button:hover {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+.notes-menu .copy-button:pressed {
+    color: #ffffff;
+}
+.notes-menu .note-item .title {
+    font-size: 13px;
+}
+.notes-menu .note-item .date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
+.notes-menu .empty-list {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0 20px 0;     
+}
+.notes-menu .add-button,  
+.notes-menu .cancel-button {
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+.notes-menu .cancel-button {
+    margin-left: 4px;
+}
+.notes-menu .add-button:hover,
+.notes-menu .cancel-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.notes-menu .scroll-area {
+    background: transparent; 
+    border: none; 
+    border-radius:0;
+}
+.notes-menu .note-input {
+    background-color:rgba(17, 17, 27, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    max-height: 30px;
+    padding: 4px;
+    border-radius: 6px;
+}
+.note-input:focus {
+    border: 1px solid #89b4fa;
+}
+
+/* Todo Widget Styles */
+.todo-widget {
+    padding: 0 2px 0 2px;
+}
+
+.todo-widget .widget-container {
+    padding: 0;
+	min-width: 64px;
+}
+.todo-widget .icon {
+    color: #00f8d7;
+}
+.todo-widget .label {
+    font-size: 12px;
+    padding: 0;
+	margin-right: 13px;
+	margin-left: 13px;
+}
+/* Todo Menu Styles */
+.todo-menu {
+    background-color: var(--app-background);
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 500px;
+    max-height: 500px;
+}
+.todo-menu .header {
+    margin: 16px 10px
+}
+.todo-menu .header .add-task-button,
+.todo-menu .header .tab-buttons {
+    border: none;
+    border-radius: 13px;
+    color: #ffffff;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px;
+    font-family: 'Segoe UI', 'JetBrainsMono NFP';
+}
+.todo-menu .header .tab-buttons {
+    margin: 0;
+    font-size: 12px;
+}
+.todo-menu .header .add-task-button:hover {
+    background-color: #0f91e7;
+}
+.todo-menu .header .tab-buttons.in-progress,
+.todo-menu .header .tab-buttons.completed {
+    background-color: transparent;
+}
+.todo-menu .header .tab-buttons.in-progress:checked {
+    color: #7fffd4;
+}
+.todo-menu .header .tab-buttons.completed:checked {
+    color: #ff583b;
+}
+.todo-menu .header .tab-buttons.sort {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 12px;
+    min-height: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    padding: 0;
+    margin: 0 8px 0 0;
+    font-family: 'JetBrainsMono NFP';
+}
+.todo-menu .header .tab-buttons.sort:pressed {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.todo-menu .no-tasks {
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    color: #979fa0;
+    font-weight: 400;
+    margin-top: 16px;
+}
+.todo-menu .no-tasks-icon {
+    font-size: 80px;
+    color: #979fa0;
+    font-family: "JetBrainsMono NFP";
+    margin-top: 64px;
+    font-weight: 400;
+}
+
+/* Task item styles */
+.todo-menu .task-item {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0px 12px 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 0;
+}
+.todo-menu .task-item.expanded {
+    background-color: rgba(211, 214, 219, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.todo-menu .task-item.drop-highlight,
+.todo-menu .task-item.drop-highlight:hover,
+.todo-menu .task-item.drop-highlight:focus {
+    background-color: rgba(0, 120, 212, 0.26);
+    border: 1px solid #007acc;
+}
+.todo-menu .task-item .title {
+    color: #ebebeb;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    padding: 0 8px 8px 8px;
+    margin-top: 6px;
+}
+.todo-menu .task-item.completed .title,
+.todo-menu .task-item.completed .description {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+.todo-menu .task-item .description {
+    color: #bdc3c7;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 8px 8px 8px;
+    font-family: 'Segoe UI';
+}
+.todo-menu .task-checkbox {
+    background-color: transparent;
+    border: none;
+    margin-left: 12px;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #ebebeb;
+    font-family: 'JetBrainsMono NFP';
+}
+.todo-menu .task-checkbox:checked {
+    color: #7f8c8d;
+}
+
+/* Task info row styles */
+.todo-menu .task-info-row {
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
+.todo-menu .task-info-row .date-text,
+.todo-menu .task-info-row .category-text {
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    color: #7e7f88;
+    font-size: 13px;
+    padding-left: 0px;
+    margin-right: 12px;
+}
+.todo-menu .task-info-row .date-icon,
+.todo-menu .task-info-row .category-icon {
+    font-weight: 400;
+    color: #a7a8b3;
+    font-size: 14px;
+    font-family: 'JetBrainsMono NFP';
+    margin-top: 1px;
+}
+.todo-menu .task-info-row .category-text.important,
+.todo-menu .task-info-row .category-icon.important {
+    color: #ff2600;
+}
+.todo-menu .task-info-row .category-text.urgent,
+.todo-menu .task-info-row .category-icon.urgent {
+    color: #ff583b;
+}
+.todo-menu .task-info-row .category-text.soon,
+.todo-menu .task-info-row .category-icon.soon {
+    color: #7fffd4;
+}
+.todo-menu .task-info-row .category-text.today,
+.todo-menu .task-info-row .category-icon.today {
+    color: #f9e2af;
+}
+.todo-menu .task-info-row .delete-task-button {
+    background-color: rgb(160, 160, 160);
+    color: #000000;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0 8px;
+    border-radius: 12px;
+    min-height: 20px;
+    max-height: 20px;
+    margin-right: 8px;
+}
+
+/* App dialog style */
+.todo-menu .app-dialog {
+    font-family: 'Segoe UI';
+    background-color: #202020;
+}
+.todo-menu .app-dialog .buttons-container {
+    background-color: #171717;
+    margin-top: 16px;
+    border-top: 1px solid #000;
+    max-height: 80px;
+    min-height: 80px;
+    padding: 0 20px 0 20px;
+}
+
+.todo-menu .app-dialog .title-field,
+.todo-menu .app-dialog .desc-field {
+    background-color: #181818;
+    border: 1px solid #303030;
+    border-radius: 4px;
+    padding: 0 6px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 10px 0px 5px 0;
+    min-height: 30px;
+}
+.todo-menu .app-dialog .desc-field {
+    max-height: 60px;
+}
+.todo-menu .app-dialog .title-field:focus,
+.todo-menu .app-dialog .desc-field:focus {
+    border-bottom-color: #4cc2ff;
+}
+.todo-menu .app-dialog .button {
+    background-color: #2d2d2d;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+    min-width: 80px;
+    padding: 0 6px;
+    margin: 10px 0 5px 6px;
+    min-height: 28px;
+    outline: none;
+}
+.todo-menu .app-dialog .buttons-container .button {
+    margin: 10px 0 5px 0px;
+    font-size: 13px;
+}
+.todo-menu .app-dialog .button:focus {
+    border: 2px solid #adadad;
+}
+.todo-menu .app-dialog .button:focus,
+.todo-menu .app-dialog .button:hover {
+    background-color: #4A4A4A;
+}
+.todo-menu .app-dialog .button:pressed {
+    background-color: #3A3A3A;
+}
+.todo-menu .app-dialog .button.add {
+    background-color: #0078D4;
+}
+.todo-menu .app-dialog .button.add:focus,
+.todo-menu .app-dialog .button.add:hover {
+    background-color: #0066B2;
+}
+.todo-menu .app-dialog .button.add:pressed {
+    background-color: #00509E;
+}
+.todo-menu .app-dialog .warning-message {
+    background-color: #2b0b0e;
+    border: 1px solid #5a303c;
+    border-radius: 4px;
+    color: #cc9b9f;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    margin: 4px 0px;
+}
+.todo-menu .app-dialog .category-button {
+    background-color: #2d2d2d;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Segoe UI';
+    font-size: 11px;
+    font-weight: 700;
+    color: #afafaf;
+    padding: 0 6px;
+    margin-top: 8px;
+    min-height: 24px;
+    outline: none;
+}
+.todo-menu .app-dialog .category-button:checked {
+    background-color: #535353;
+    color: #ffffff;
+}
+
+/* Widget style */
+.launchpad-widget .widget-container {
+    background-color: var(--widget-background);
+    border-radius: 18px;
+	border: 2px solid #34343a;
+}
+
+.launchpad-widget {
+}
+.launchpad-widget .label {}
+.launchpad-widget .icon {
+}
+
+/* Launchpad context menu style */
+.launchpad .context-menu {
+    background-color: var(--app-background);
+    border: none;
+    border-radius: 6px;
+    padding: 4px 0px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: 600
+}
+.launchpad .context-menu::item {
+    background-color: var(--app-background);
+    padding: 6px 12px;
+    margin: 2px 6px;
+    border-radius: 4px;
+    min-width: 100px;
+}
+.launchpad .context-menu::item:selected {
+    background-color: #3a3a3a;
+    color: #FFFFFF;
+}
+.launchpad .context-menu::item:pressed {
+    background-color: #3A3A3A;
+}
+.launchpad .context-menu::separator {
+    height: 1px;
+    background-color: #404040;
+    margin: 4px 8px;
+}
+.launchpad .context-menu::item:disabled {
+    color: #666666;
+    background-color: transparent;
+}
+
+/* Launchpad App dialog style */
+.launchpad .app-dialog {
+    font-family: 'Segoe UI';
+    background-color: #202020;
+}
+.launchpad .app-dialog .buttons-container {
+    background-color: #171717;
+    margin-top: 16px;
+    border-top: 1px solid #000;
+    max-height: 80px;
+    min-height: 80px;
+    padding: 0 20px 0 20px;
+}
+.launchpad .app-dialog .message {
+    color: #FFFFFF;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 0
+}
+.launchpad .app-dialog .title-field,
+.launchpad .app-dialog .path-field,
+.launchpad .app-dialog .icon-field {
+    background-color: #181818;
+    border: 1px solid #303030;
+    border-radius: 4px;
+    padding: 0 6px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 10px 0px 5px 0;
+    min-height: 30px;
+}
+.launchpad .app-dialog .title-field:focus,
+.launchpad .app-dialog .path-field:focus,
+.launchpad .app-dialog .icon-field:focus {
+    border-bottom-color: #4cc2ff;
+}
+.launchpad .app-dialog .button {
+    background-color: #2d2d2d;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+    color: #FFFFFF;
+    min-width: 80px;
+    padding: 0 6px;
+    margin: 10px 0 5px 6px;
+    min-height: 28px;
+    outline: none;
+}
+.launchpad .app-dialog .buttons-container .button {
+    margin: 10px 0 5px 0px;
+    font-size: 13px;
+}
+.launchpad .app-dialog .button:focus {
+    border: 2px solid #adadad;
+}
+.launchpad .app-dialog .button:focus,
+.launchpad .app-dialog .button:hover {
+    background-color: #4A4A4A;
+}
+.launchpad .app-dialog .button:pressed {
+    background-color: #3A3A3A;
+}
+.launchpad .app-dialog .button.add,
+.launchpad .app-dialog .button.save {
+    background-color: #0078D4;
+}
+.launchpad .app-dialog .button.add:focus,
+.launchpad .app-dialog .button.save:focus,
+.launchpad .app-dialog .button.add:hover,
+.launchpad .app-dialog .button.save:hover {
+    background-color: #0066B2;
+}
+.launchpad .app-dialog .button.add:pressed,
+.launchpad .app-dialog .button.save:pressed {
+    background-color: #00509E;
+}
+.launchpad .app-dialog .button.delete {
+    background-color: #bd2d14;
+}
+.launchpad .app-dialog .button.delete:focus,
+.launchpad .app-dialog .button.delete:hover {
+    background-color: #b30f00;
+}
+.launchpad .app-dialog .button.delete:pressed {
+    background-color: #a00b00;
+}
+.launchpad .app-dialog .warning-message {
+    background-color: #2b0b0e;
+    border: 1px solid #5a303c;
+    border-radius: 4px;
+    color: #cc9b9f;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 12px;
+    margin: 4px 0px;
+}
+/* Launchpad popup style */
+.launchpad .drop-overlay {
+    background-color: var(--app-background);
+    border:4px dashed #3c80ff;
+}
+.launchpad .drop-overlay .text {
+    color: #ffffff;
+    font-family: 'Segoe UI';
+    font-size: 64px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.launchpad .launchpad-container {
+    background-color: transparent;
+}
+.launchpad .search-container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background-color:rgba(0, 0, 0, 0.3);
+    min-height: 80px;
+    margin: 0;
+    padding: 0
+}
+.launchpad .search-input {
+    max-width: 400px;
+    padding: 8px 12px;
+    font-size: 14px;
+    min-height: 24px;
+    max-height: 24px;
+    font-family: 'Segoe UI';
+    border-radius: 20px;
+    border: 2px solid rgb(53, 54, 56);
+    background-color: rgba(0, 0, 0, 0.507);
+    color: #a6adc8;
+}
+.launchpad .search-input:focus  {
+    border: 2px solid rgb(22, 114, 190);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.launchpad .launchpad-scroll-area {
+    background-color: transparent;
+    border: none;
+}
+.launchpad .app-icon {
+    background-color: rgba(102, 10, 10, 0);
+    border-radius: 12px;
+    border: 2px solid rgba(112, 76, 32, 0);
+    padding-top: 10px;
+    margin: 24px 6px 6px 6px;
+    max-width: 110px;
+    min-width: 110px;
+    min-height: 110px;
+    max-height: 110px; 
+}
+.launchpad .app-icon:focus {
+    border: 2px solid #6c6c6c;
+    background-color: rgba(58, 58, 58, 0.30);
+}
+.launchpad .app-icon:hover {
+    border: 2px solid #6c6c6c;
+    background-color: rgba(58, 58, 58, 0.50);
+}
+.launchpad .app-icon .title {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    margin-top: 2px;
+    font-weight: 600
+}
+/* App icon .launchpad .app-icon or URL icon .launchpad .app-icon.url */
+.launchpad .app-icon.url .title{
+    color: #52f1d2;
+}
+.launchpad .app-icon .icon {
+    padding: 0;
+    margin: 0
+}
+
+/* AI ASSISTANT */
+.ai-chat-widget {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.ai-chat-widget .widget-container {
+	min-width: 32px;
+	max-width: 200px;
+}
+
+.ai-chat-widget .icon {
+	font-size: 12px;
+}
+.ai-chat-popup {
+    background-color: rgba(24, 25, 27, 0.8);
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 600px;
+    max-height: 600px;
+}
+.ai-chat-popup .chat-header {
+    background-color: rgba(24, 25, 27, 0.4);
+    padding: 16px;
+}
+.ai-chat-popup .chat-footer {
+    background-color: rgba(24, 25, 27, 0);
+    padding: 16px;
+ 
+}
+.ai-chat-popup .chat-header .provider-label,
+.ai-chat-popup .chat-header .model-label {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    color: #ffffff;
+    margin-right: 8px;
+    font-weight: 600;
+}
+.ai-chat-popup .chat-header .provider-button,
+.ai-chat-popup .chat-header .model-button {
+    font-family: 'Segoe UI';
+    background-color: #202020;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+    color: #ffffff;
+    margin-right: 8px;
+    min-width: 130px;
+    max-width: 130px;
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+.ai-chat-popup .chat-header .provider-button:disabled,
+.ai-chat-popup .chat-header .model-button:disabled {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Context menu styles for header and chat content */
+.ai-chat-popup .context-menu {
+    background-color: #202020;
+    border: none;
+    padding: 4px 0px;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.ai-chat-popup .context-menu::separator {
+    height: 1px;
+    background-color: #404040;
+    margin: 4px 8px;
+}
+ 
+.ai-chat-popup .context-menu::item {
+    background-color: transparent;
+    padding: 6px 12px;
+    margin: 2px 6px;
+    border-radius: 4px;
+    min-width: 100px;
+}
+/* Context menu item styles for header dropdown */
+.ai-chat-popup .chat-header .context-menu::item {
+    min-width: 130px;
+    max-width: 130px;
+    padding: 4px;
+}
+.ai-chat-popup .context-menu::item:disabled {
+    color: #666666;
+} 
+.ai-chat-popup .context-menu::item:selected {
+    background-color: #3a3a3a;
+    color: #FFFFFF;
+}
+.ai-chat-popup .context-menu::item:checked {
+    background-color: #0078d7;
+    color: #FFFFFF;
+}
+ 
+
+.ai-chat-popup .chat-content {
+    background-color: rgba(206, 10, 10, 0);
+    border: none;
+}
+.ai-chat-popup .chat-content .empty-chat .greeting,
+.ai-chat-popup .chat-content .empty-chat .message {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Segoe UI';
+    font-size: 48px;
+    font-weight: 600;
+}
+.ai-chat-popup .chat-content .empty-chat .message {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 24px;
+    padding-top: 8px;
+    
+}
+.ai-chat-popup .chat-content .user-message,
+.ai-chat-popup .chat-content .assistant-message {
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+}
+.ai-chat-popup .chat-content .user-message {
+    margin-left: 26px;
+}
+.ai-chat-popup .chat-content .assistant-message {
+    background-color: rgba(162, 168, 187, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.ai-chat-popup .chat-content .assistant-icon {
+    font-size: 24px;
+    color: #8c8d92;
+    margin-right: 8px;
+    font-family: "JetBrainsMono NFP";
+}
+
+.ai-chat-popup .chat-footer .chat-input {
+    background-color: rgba(24, 25, 27, 0.6);
+    border: 2px solid  #2d2d2d;
+    border-radius: 4px;
+    padding: 0 8px;
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 8px;
+    max-height: 28px;
+    min-height: 28px;
+}
+.ai-chat-popup .chat-footer .chat-input:focus {
+    border-color: #0078d7;
+}
+.ai-chat-popup .chat-footer .clear-button,
+.ai-chat-popup .chat-footer .send-button,
+.ai-chat-popup .chat-footer .stop-button {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    font-size: 12px;
+    max-width: 30px;
+    min-width: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    border-radius: 4px;
+    margin-top: 8px;
+    border: none;
+    font-family: "JetBrainsMono NFP";
+}
+.ai-chat-popup .chat-footer .stop-button {
+    background-color: #0078d7;
+}
+.ai-chat-popup .chat-footer .clear-button:hover,
+.ai-chat-popup .chat-footer .send-button:hover,
+.ai-chat-popup .chat-footer .stop-button:hover {
+    background-color: #464646;
+}
+.ai-chat-popup .chat-footer .clear-button:disabled,
+.ai-chat-popup .chat-footer .send-button:disabled,
+.ai-chat-popup .chat-footer .stop-button:disabled {
+    background-color: #2d2d2d;
+    color: #818181;
+}
+
+/* === Global rounding reset (keeps existing colors) === */
+.brightness-widget,
+.bluetooth-widget,
+.microphone-widget,
+.cpu-widget,
+.memory-widget,
+.weather-widget,
+.volume-widget,
+.launchpad-widget,
+.disk-widget,
+.whkd-widget,
+.media-widget,
+.pomodoro-widget,
+.notes-widget,
+.todo-widget,
+.taskbar-widget,
+.home-widget,
+.komorebi-active-layout,
+.komorebi-workspaces,
+.language-widget,
+.active-window-widget,
+.cava-widget,
+.ai-chat-widget {
+    background-color: var(--widget-background);
+    border: 0;
+    border-radius: 12px;
+}
+
+/* Clock keeps its own colors */
+.clock-widget {
+    background-color: rgb(79, 79, 79);
+    border: 2px solid #6c6c6c;
+    border-radius: 12px;
+}
+
+/* Keep border only for taskbar and home widgets */
+.taskbar-widget,
+.home-widget {
+    background-color: rgb(79, 79, 79);
+    border: 2px solid #6c6c6c;
+}
+
+/* Make inner containers transparent to avoid double borders */
+.bluetooth-widget .widget-container,
+.microphone-widget .widget-container,
+.cpu-widget .widget-container,
+.memory-widget .widget-container,
+.weather-widget .widget-container,
+.volume-widget .widget-container,
+.launchpad-widget .widget-container,
+.disk-widget .widget-container,
+.whkd-widget .widget-container,
+.media-widget .widget-container,
+.pomodoro-widget .widget-container,
+.notes-widget .widget-container,
+.todo-widget .widget-container,
+.taskbar-widget .widget-container,
+.home-widget .widget-container,
+.komorebi-active-layout .widget-container,
+.komorebi-workspaces .widget-container,
+.language-widget .widget-container,
+.active-window-widget .widget-container,
+.cava-widget .widget-container,
+.ai-chat-widget .widget-container,
+.clock-widget .widget-container {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    min-width: 32px;
+}
+
+.weather-widget .widget-container{
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    max-width: 72px;
+    min-width: 100px;
+}
+.volume-widget .widget-container {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    max-width: 72px;
+    min-width: 72px;
+}
+
+/* Consistent widget spacing */
+.widget {
+    padding: 0;
+    margin: 1px 2px;
+}
+.widget .widget-container {
+    padding: 0 6px;
+    margin: 0;
+}

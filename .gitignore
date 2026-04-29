@@ -1,0 +1,8 @@
+tosu-yasb/
+*.backup
+*.bak
+.DS_Store
+node_modules/
+dist/
+/.idea/
+/.vscode/

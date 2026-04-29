@@ -1,0 +1,121 @@
+[
+  {
+    "title": "SteelSeries GG",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\SteelSeries\\SteelSeries GG\\SteelSeries GG.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\steelseries_gg_1763294552854.png",
+    "type": "app",
+    "id": 1763294552855
+  },
+  {
+    "title": "Roblox",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Roblox\\Roblox Player.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\roblox_player_1763294520796.png",
+    "type": "app",
+    "id": 1763294520805
+  },
+  {
+    "title": "Stremio",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Stremio.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\stremio_1763294511678.png",
+    "type": "app",
+    "id": 1763294511678
+  },
+  {
+    "title": "Jellyfin",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Jellyfin Server\\Jellyfin Tray App.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\jellyfin_tray_app_1763294501013.png",
+    "type": "app",
+    "id": 1763294501014
+  },
+  {
+    "title": "FileZilla",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\FileZilla FTP Client\\FileZilla.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\filezilla_1763294497201.png",
+    "type": "app",
+    "id": 1763294497202
+  },
+  {
+    "title": "WinSCP",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\WinSCP.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\winscp_1763294492363.png",
+    "type": "app",
+    "id": 1763294492363
+  },
+  {
+    "title": "Dolphin",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Dolphin.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\dolphin_1763294466234.png",
+    "type": "app",
+    "id": 1763294466234
+  },
+  {
+    "title": "Blockbench",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Blockbench.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\blockbench_1763294442914.png",
+    "type": "app",
+    "id": 1763294442915
+  },
+  {
+    "title": "Epic Games Launcher",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Epic Games Launcher.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\epic_games_launcher_1758475421399.png",
+    "type": "app",
+    "id": 1758475421401
+  },
+  {
+    "title": "Zen",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Zen.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\zen_1758191843846.png",
+    "type": "app",
+    "id": 1758191843848
+  },
+  {
+    "title": "Minecraft",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Prism Launcher.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\minecraft_1763294421630.png",
+    "type": "app",
+    "id": 1754643578970
+  },
+  {
+    "title": "RustDesk",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\RustDesk\\RustDesk.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\rustdesk_1754636611842.png",
+    "type": "app",
+    "id": 1754636611846
+  },
+  {
+    "title": "Steam",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\\Steam.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\steam_1754179253149.png",
+    "type": "app",
+    "id": 1754179253149
+  },
+  {
+    "title": "Spotify",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Spotify.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\spotify_1754179247881.png",
+    "type": "app",
+    "id": 1754179247882
+  },
+  {
+    "title": "Discord",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Discord Inc\\Discord.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\discord_1754179241338.png",
+    "type": "app",
+    "id": 1754179241348
+  },
+  {
+    "title": "Telegram",
+    "path": "C:\\Users\\Bartosz\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Telegram Desktop\\Telegram.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\telegram_1754179235140.png",
+    "type": "app",
+    "id": 1754179235141
+  },
+  {
+    "title": "Firefox",
+    "path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Firefox.lnk",
+    "icon": "C:\\Users\\Bartosz\\.config\\yasb\\launchpad\\icons\\firefox_1754179220352.png",
+    "type": "app",
+    "id": 1754179220353
+  }
+]
