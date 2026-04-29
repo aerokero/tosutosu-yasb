@@ -1,19 +1,29 @@
-# Tosuto's YASB Reborn Theme
+ # tosutosu's YASB Reborn Theme
 
-Tosuto's YASB Reborn is a modern, customizable theme for Yet Another Startpage (YASB). It provides updated styles, icons, and configuration examples to refresh the YASB experience while remaining lightweight and easy to install.
+tosutosu's YASB Reborn is a modern, customizable theme for Yet Another Startpage (YASB). It updates visuals, app icons, and configuration examples to give YASB a refreshed, lightweight look while remaining easy to install and customize.
 
-## Contents
-- `config.yaml` — theme configuration
-- `styles.css` — main stylesheet
-- `launchpad/` — app launcher config and icons
+## What’s Included
+- `config.yaml` — theme configuration and example mappings
+- `styles.css` — main stylesheet with theme variables
+- `launchpad/` — launcher configuration and icon assets
+- `notes.json`, `todo.json` — personal workspace files (optional)
 
 ## Installation
-1. Clone this repository or download the files.
-2. Copy the `config.yaml` and `styles.css` into your YASB configuration folder.
-3. Restart or refresh YASB to apply the theme.
+1. Clone this repository:
 
-## Notes
-- The `tosu-yasb/` folder in this workspace contains backups and is not part of the theme distribution.
+```bash
+git clone https://github.com/aerokero/tosutosu-yasb.git
+```
+
+2. Copy `config.yaml` and `styles.css` into your YASB configuration directory.
+3. Refresh or restart YASB to apply the theme.
+
+## Backup folder
+The `tosu-yasb/` directory in this workspace contains backups and is intentionally excluded from the packaged theme.
 
 ## License
-Choose and add a license file if you want to publish usage terms.
+This project is licensed under the MIT License — see `LICENSE` for details.
+
+## Contribute
+Suggestions, icon updates, and improvements are welcome via GitHub Issues or Pull Requests.
+
