@@ -17,8 +17,13 @@ Version: 2.0.0 — compatible with YASB v2.0.0
 git clone https://github.com/aerokero/tosutosu-yasb.git
 ```
 
-2. Copy `config.yaml` and `styles.css` into your YASB configuration directory.
-3. Refresh or restart YASB to apply the theme.
+2. Choose your language variant:
+   - **English**: use `config.i18n.en.yaml`
+   - **Polish**: use `config.i18n.pl.yaml`
+   - **Custom**: edit `config.yaml` directly
+
+3. Copy your chosen config and `styles.css` into your YASB configuration directory.
+4. Refresh or restart YASB to apply the theme.
 
 ## Backup folder
 The `tosu-yasb/` directory in this workspace contains backups and is intentionally excluded from the packaged theme.
@@ -33,16 +38,15 @@ See `CHANGELOG.md` for upgrade notes.
 
 ## Localization
 
-This repository includes a small starter i18n helper to keep widget strings consistent across languages.
+This theme includes generated configs for English and Polish:
+- `config.i18n.en.yaml` — English widget labels
+- `config.i18n.pl.yaml` — Polish widget labels
 
-- Translations live in `i18n/translations.json`.
-- To generate a localized copy of `config.yaml`, run:
+Translations are maintained in `i18n/translations.json`. To update or add languages:
 
-```bash
-python scripts/apply_i18n.py en
-```
-
-This produces `config.i18n.en.yaml`. The script performs simple replacements for known widget strings (starter set). Edit `i18n/translations.json` to add or tweak translations.
+1. Edit `i18n/translations.json`
+2. Run `python scripts/apply_i18n.py <lang>` to generate `config.i18n.<lang>.yaml`
+3. Test and commit the new variant
 
 ## Contribute
 Suggestions, icon updates, and improvements are welcome via GitHub Issues or Pull Requests.
