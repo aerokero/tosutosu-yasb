@@ -5,6 +5,8 @@
     --widget-background: rgb(40, 40, 40);
 	--clock-background: rgb(79, 79, 79);
 	--active-app-background: rgb(58, 58, 58);
+    --bar-bg: rgb(23, 23, 23);
+    --border-color: #34343a;
 }
 
 * {
@@ -13,10 +15,10 @@
 }
 
 .yasb-bar {
-	background-color: rgb(23, 23, 23);
+    background-color: var(--bar-bg);
     margin: -1px -1px 0px -1px;
-	border-radius: 2px;
-    border: 1px solid #34343a;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 6px;

@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Example App",
+    "path": "C:\\Path\\To\\App.lnk",
+    "icon": "launchpad/icons/app.png",
+    "type": "app",
+    "id": 1000000000001
+  },
+  {
+    "title": "Another App",
+    "path": "C:\\Path\\To\\AnotherApp.lnk",
+    "icon": "launchpad/icons/another.png",
+    "type": "app",
+    "id": 1000000000002
+  }
+]
