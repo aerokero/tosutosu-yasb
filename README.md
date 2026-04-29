@@ -75,7 +75,7 @@ The custom widget extends YASB's built-in weather widget and translates weather 
 4. **Enable in config**:
    ```yaml
    weather:
-     type: "yasb.weather_localized.WeatherLocalizedWidget"
+     type: "core.widgets.yasb.weather_localized.WeatherLocalizedWidget"
      options:
        locale: "pl"  # or "en"
        # ... other weather options

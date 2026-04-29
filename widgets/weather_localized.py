@@ -4,13 +4,13 @@ Extends the built-in weather widget with multi-language support.
 
 Installation:
   1. Copy this file to your YASB installation:
-     cp widgets/weather_localized.py <YASB_PATH>/src/core/widgets/yasb/
+     cp widgets/weather_localized.py <SITE_PACKAGES>/core/widgets/yasb/
   2. Copy locales folder:
-     cp -r locales <YASB_CONFIG_DIR>/
+     cp -r locales ~/.config/yasb/
 
 Usage in config.yaml:
   weather:
-    type: "yasb.weather_localized.WeatherLocalizedWidget"
+    type: "core.widgets.yasb.weather_localized.WeatherLocalizedWidget"
     options:
       label: "<span>{icon}</span> {temp}, {feelslike}"
       locale: "pl"  # "en" or "pl"
