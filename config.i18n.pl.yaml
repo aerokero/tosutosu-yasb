@@ -12,13 +12,12 @@ bars:
     class_name: "yasb-bar"
     alignment:
       position: "top"
-      center: true
+      align: "center"
     animation:
       enabled: true
       duration: 1000
     blur_effect:
       enabled: false 
-      acrylic: true 
       dark_mode: true
       round_corners: true
       border_color: None
@@ -51,6 +50,7 @@ bars:
       ]
       right: [
         # "ai_chat",
+        "copilot",
         "brightness",
         "bluetooth",
         "microphone",
@@ -69,11 +69,6 @@ widgets:
    options:
      label: "<span>\udb82\udd0c</span>{count}"
      label_alt: "<span>\udb82\udd0c</span> Notatki: {count}"
-     container_padding:
-       top: 0
-       left: 0
-       bottom: 0
-       right: 0
      menu:
        blur: true
        round_corners: true
@@ -93,11 +88,6 @@ widgets:
        on_left: "toggle_menu"
        on_middle: "do_nothing"
        on_right: "toggle_label"
-     label_shadow:
-       enabled: false
-       color: "black"
-       radius: 3
-       offset: [ 1, 1 ]
   komorebi_active_layout:
    type: "komorebi.active_layout.ActiveLayoutWidget"
    options:
@@ -113,7 +103,7 @@ widgets:
        horizontal_stack: "\uebf0"
        right_main_vertical_stack: "\uebf1"
        monocle: "\udb80\ude08"
-       maximised: "\uf06f"
+       maximized: "\uf06f"
        floating: "\uf2d2"
        paused: "\udb83\udf89"
        tiling: "\udb81\ude40"
@@ -131,16 +121,6 @@ widgets:
        offset_top: 10
        offset_left: 1
        show_layout_icons: true
-     container_padding: 
-       top: 0
-       left: 12
-       bottom: 0
-       right: 12
-     label_shadow:
-       enabled: false
-       color: "black"
-       radius: 3
-       offset: [ 1, 1 ]
   pomodoro:
    type: "yasb.pomodoro.PomodoroWidget"
    options:
@@ -160,11 +140,6 @@ widgets:
        work: "\uf252"
        break: "\uf253"
        paused: "\uf254"
-     container_padding:
-       top: 0
-       left: 12
-       bottom: 0
-       right: 12
      menu:
        blur: true
        round_corners: true
@@ -183,11 +158,6 @@ widgets:
        on_left: "toggle_menu"
        on_middle: "reset_timer"
        on_right: "toggle_label"
-     label_shadow:
-       enabled: false
-       color: "black"
-       radius: 2
-       offset: [ 1, 1 ]
   bluetooth:
     type: "yasb.bluetooth.BluetoothWidget"
     options:
@@ -207,18 +177,12 @@ widgets:
       callbacks:
         on_left: "toggle_label"
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
-      label_shadow:
-        enabled: false
-        color: "black"
-        radius: 2
-        offset: [ 1, 1 ]
   brightness:
     type: "yasb.brightness.BrightnessWidget"
     options:
       label: "<span>{icon}</span>"
       label_alt: "Jasność {percent}%"
       tooltip: true
-      hide_unsupported: true
       brightness_toggle_level: [0, 45, 75, 100]
       auto_light: false
       auto_light_icon: "\udb80\udce1"
@@ -242,16 +206,6 @@ widgets:
       callbacks:
           on_left: "toggle_label"
           on_right: "toggle_level_next"
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
   wifi:
       type: "yasb.wifi.WifiWidget"
       options:
@@ -262,11 +216,6 @@ widgets:
           on_left: "exec cmd.exe /c start ms-settings:network"
           on_middle: "do_nothing"
           on_right: "toggle_label"
-        container_padding:
-          top: 0
-          left: 8
-          bottom: 0
-          right: 8
         wifi_icons: [
           "\udb82\udd2e",  # Icon for 0% strength
           "\udb82\udd1f",  # Icon for 1-20% strength
@@ -295,11 +244,6 @@ widgets:
         on_left: "do_nothing"
         on_middle: "do_nothing"
         on_right: "do_nothing"
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 8
   whkd:
     type: "yasb.whkd.WhkdWidget"
     options:
@@ -315,11 +259,6 @@ widgets:
           key_replace: "\u2191"
         - key: "down"
           key_replace: "\u2193"
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 4
   disk:
     type: "yasb.disk.DiskWidget"
     options:
@@ -335,7 +274,7 @@ widgets:
           border_color: "System"
           alignment: "left"
           direction: "down"
-          distance: 6
+          offset_top: 6
         callbacks:
           on_left: "toggle_group"
           on_middle: "toggle_label"
@@ -356,11 +295,6 @@ widgets:
       bar_width: 5
       sleep_timer: 2
       hide_empty: true
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
@@ -395,16 +329,6 @@ widgets:
         histogram_num_columns: 8
         callbacks:
           on_right: "exec cmd /c Taskmgr"
-        label_shadow:
-          enabled: false
-          color: "black"
-          radius: 3
-          offset: [ 1, 1 ]
-        container_padding:
-          top: 0
-          left: 6
-          bottom: 0
-          right: 6
   memory:
       type: "yasb.memory.MemoryWidget"
       options:
@@ -429,11 +353,6 @@ widgets:
           - "\u2586" # 60%
           - "\u2587" # 70%
           - "\u2588" # 80%+
-        label_shadow:
-          enabled: false
-          color: "black"
-          radius: 3
-          offset: [ 1, 1 ]
   notifications:
     type: "yasb.notifications.NotificationsWidget"
     options:
@@ -445,11 +364,6 @@ widgets:
         on_left: "toggle_notification"
         on_right: "do_nothing"
         on_middle: "toggle_label"
-      container_padding:
-        top: 0
-        left: 12
-        bottom: 0
-        right: 12
   microphone:
       type: "yasb.microphone.MicrophoneWidget"
       options:
@@ -471,11 +385,6 @@ widgets:
           on_left: "toggle_mic_menu"
           on_middle: "toggle_label"
           on_right: "toggle_mute"
-        label_shadow:
-          enabled: false
-          color: "black"
-          radius: 3
-          offset: [ 1, 1 ]
   home:
     type: "yasb.home.HomeWidget"
     options:
@@ -493,11 +402,6 @@ widgets:
       border_color: "System"
       offset_top: 10
       offset_left: 10
-      container_padding: 
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
       alignment: "left"
       direction: "down"
       menu_labels:
@@ -509,11 +413,6 @@ widgets:
        system: "Ustawienia"
        about: "O systemie"
        task_manager: "Menedżer zadań"
-      label_shadow:
-       enabled: false
-       color: "black"
-       radius: 2
-       offset: [ 1, 1 ]
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -535,7 +434,6 @@ widgets:
       thumbnail_padding: 100
       thumbnail_corner_radius: 50
       thumbnail_edge_fade: true
-      container_padding: {'top': 3, 'left': 12, 'bottom': 3, 'right': 0}
       scrolling_label:
         enabled: true
         update_interval_ms: 60
@@ -570,11 +468,6 @@ widgets:
         pause: "\ue769"
         prev_track: "\ue892"
         next_track: "\ue893"
-      label_shadow:
-        enabled: true
-        color: "#464646"
-        radius: 1
-        offset: [ 1, 1 ]
   clock:
       type: "yasb.clock.ClockWidget"
       options:
@@ -617,16 +510,6 @@ widgets:
           on_left: "toggle_calendar"
           on_middle: "toggle_label"
           on_right: "toggle_label"
-        label_shadow:
-          enabled: false
-          color: "black"
-          radius: 3
-          offset: [ 1, 1 ]
-        container_padding:
-          top: 0
-          left: 4
-          bottom: 0
-          right: 8
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
@@ -640,11 +523,6 @@ widgets:
       hide_if_offline: true
       animation: true
       offset_top: 10
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
   weather:
     type: "yasb.weather_localized.WeatherLocalizedWidget"
     options:
@@ -657,7 +535,6 @@ widgets:
       hide_decimal: true
       units: "metric"
       location: "Poland, Krakow"
-      locale: "pl"
       callbacks:
         on_left: "toggle_card"
         on_right: "toggle_label"
@@ -677,11 +554,6 @@ widgets:
         thunderstormDay: "\ue30f"
         thunderstormNight: "\ue338"
         default: "\uebaa"
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
       weather_card:
         blur: true
         round_corners: true
@@ -717,11 +589,6 @@ widgets:
             snow_effect_intensity: 1.0 # 0.01 - 10.0
             scale_with_chance: true
             enable_debug: false
-      label_shadow:
-        enabled: false
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -744,13 +611,7 @@ widgets:
         border_color: "System"
         alignment: "right"
         direction: "down"
-        distance: 6
         offset_top: 10
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
@@ -767,28 +628,17 @@ widgets:
         hibernate: ["\uf28e", "Hibernuj"]
         sleep: ["\u23fe", "Uśpij"]
         cancel: ["", "Anuluj"]
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
       animation:
        enabled: true
        duration: 200
-       type: "fadeInOut"
       icon_size: 16
       ignore_apps:
         processes: []
         titles: []
         classes: []
-      container_padding:
-        top: 2
-        left: 0
-        bottom: 2
-        right: 0
       title_label:
         enabled: false
         show: "focused"
@@ -910,3 +760,13 @@ widgets:
               max_tokens: 4096
             - name: "gpt-3.5-turbo"
               label: "GPT3.5 Turbo"
+  copilot:
+      type: "yasb.copilot.CopilotWidget"
+      options:
+        label: "<span>\udb81\ude74</span>"
+        label_alt: "{used}/{allowance}"
+        token: ""
+        plan: "pro"
+        callbacks:
+          on_left: "toggle_popup"
+          on_right: "toggle_label"

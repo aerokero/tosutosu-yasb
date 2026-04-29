@@ -6,19 +6,60 @@ komorebi:
   stop_command: "komorebic stop --whkd"
   reload_command: "komorebic stop --whkd && komorebic start --whkd"
 bars:
-  primary-bar:
+  secondary-bar:
     enabled: true
-    screens: ["G27QC"]
+    screens: ["*"]
     class_name: "yasb-bar"
     alignment:
       position: "top"
-      center: true
+      align: "center"
+    animation:
+      enabled: true
+      duration: 1000
+    blur_effect:
+      enabled: false
+      dark_mode: true
+      round_corners: true
+      border_color: None
+    window_flags:
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 40
+    padding:
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+    widgets:
+      left: [
+        "media",
+        "launchpad",
+        "komorebi_control",
+        "komorebi_active_layout"
+      ]
+      center: [
+        "taskbar"
+      ]
+      right: [
+        "pomodoro",
+        "brightness",
+        "bluetooth",
+        "microphone",
+        "volume"
+      ]
+  primary-bar:
+    enabled: true
+    screens: ["primary"]
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      align: "center"
     animation:
       enabled: true
       duration: 1000
     blur_effect:
       enabled: false 
-      acrylic: true 
       dark_mode: true
       round_corners: true
       border_color: None
@@ -39,6 +80,7 @@ bars:
         # "komorebi_workspaces",
         "disk",
         "whkd",
+        "komorebi_control",
         "komorebi_active_layout",
         "media",
         "pomodoro"
@@ -51,16 +93,17 @@ bars:
       ]
       right: [
         # "ai_chat",
+        "copilot",
         "brightness",
         "bluetooth",
         "microphone",
         "cpu",
         "memory",
-        "weather",
         # "language",
         # "wifi",
         # "power_menu",
         "volume",
+        "open_meteo",
         "clock"
       ]
 widgets:
@@ -69,11 +112,6 @@ widgets:
    options:
      label: "<span>\udb82\udd0c</span>{count}"
      label_alt: "<span>\udb82\udd0c</span> Notatki: {count}"
-     container_padding:
-       top: 0
-       left: 0
-       bottom: 0
-       right: 0
      menu:
        blur: true
        round_corners: true
@@ -93,11 +131,6 @@ widgets:
        on_left: "toggle_menu"
        on_middle: "do_nothing"
        on_right: "toggle_label"
-     label_shadow:
-       enabled: false
-       color: "black"
-       radius: 3
-       offset: [ 1, 1 ]
   komorebi_active_layout:
    type: "komorebi.active_layout.ActiveLayoutWidget"
    options:
@@ -113,7 +146,7 @@ widgets:
        horizontal_stack: "\uebf0"
        right_main_vertical_stack: "\uebf1"
        monocle: "\udb80\ude08"
-       maximised: "\uf06f"
+       maximized: "\uf06f"
        floating: "\uf2d2"
        paused: "\udb83\udf89"
        tiling: "\udb81\ude40"
@@ -131,16 +164,27 @@ widgets:
        offset_top: 10
        offset_left: 1
        show_layout_icons: true
-     container_padding: 
-       top: 0
-       left: 12
-       bottom: 0
-       right: 12
-     label_shadow:
-       enabled: false
-       color: "black"
-       radius: 3
-       offset: [ 1, 1 ]
+  komorebi_control:
+    type: "komorebi.control.KomorebiControlWidget"
+    options:
+      label: "<span>\udb80\uddd9</span>"
+      icons:
+        start: "\uead3"
+        stop: "\uead7"
+        reload: "\uead2"
+      run_ahk: false
+      run_whkd: true
+      run_masir: false
+      show_version: true
+      komorebi_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: 'normal'
+        border_color: 'System'
+        alignment: 'left'
+        direction: 'down'
+        offset_top: 10
+        offset_left: 0
   pomodoro:
    type: "yasb.pomodoro.PomodoroWidget"
    options:
@@ -160,11 +204,6 @@ widgets:
        work: "\uf252"
        break: "\uf253"
        paused: "\uf254"
-     container_padding:
-       top: 0
-       left: 12
-       bottom: 0
-       right: 12
      menu:
        blur: true
        round_corners: true
@@ -183,11 +222,6 @@ widgets:
        on_left: "toggle_menu"
        on_middle: "reset_timer"
        on_right: "toggle_label"
-     label_shadow:
-       enabled: false
-       color: "black"
-       radius: 2
-       offset: [ 1, 1 ]
   bluetooth:
     type: "yasb.bluetooth.BluetoothWidget"
     options:
@@ -207,18 +241,12 @@ widgets:
       callbacks:
         on_left: "toggle_label"
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
-      label_shadow:
-        enabled: false
-        color: "black"
-        radius: 2
-        offset: [ 1, 1 ]
   brightness:
     type: "yasb.brightness.BrightnessWidget"
     options:
       label: "<span>{icon}</span>"
       label_alt: "Jasność {percent}%"
       tooltip: true
-      hide_unsupported: true
       brightness_toggle_level: [0, 45, 75, 100]
       auto_light: false
       auto_light_icon: "\udb80\udce1"
@@ -242,16 +270,6 @@ widgets:
       callbacks:
           on_left: "toggle_label"
           on_right: "toggle_level_next"
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
-      label_shadow:
-        enabled: true
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
   wifi:
       type: "yasb.wifi.WifiWidget"
       options:
@@ -262,11 +280,6 @@ widgets:
           on_left: "exec cmd.exe /c start ms-settings:network"
           on_middle: "do_nothing"
           on_right: "toggle_label"
-        container_padding:
-          top: 0
-          left: 8
-          bottom: 0
-          right: 8
         wifi_icons: [
           "\udb82\udd2e",  # Icon for 0% strength
           "\udb82\udd1f",  # Icon for 1-20% strength
@@ -295,11 +308,6 @@ widgets:
         on_left: "do_nothing"
         on_middle: "do_nothing"
         on_right: "do_nothing"
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 8
   whkd:
     type: "yasb.whkd.WhkdWidget"
     options:
@@ -315,11 +323,6 @@ widgets:
           key_replace: "\u2191"
         - key: "down"
           key_replace: "\u2193"
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 4
   disk:
     type: "yasb.disk.DiskWidget"
     options:
@@ -335,7 +338,7 @@ widgets:
           border_color: "System"
           alignment: "left"
           direction: "down"
-          distance: 6
+          offset_top: 6
         callbacks:
           on_left: "toggle_group"
           on_middle: "toggle_label"
@@ -356,11 +359,6 @@ widgets:
       bar_width: 5
       sleep_timer: 2
       hide_empty: true
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
@@ -395,16 +393,6 @@ widgets:
         histogram_num_columns: 8
         callbacks:
           on_right: "exec cmd /c Taskmgr"
-        label_shadow:
-          enabled: false
-          color: "black"
-          radius: 3
-          offset: [ 1, 1 ]
-        container_padding:
-          top: 0
-          left: 6
-          bottom: 0
-          right: 6
   memory:
       type: "yasb.memory.MemoryWidget"
       options:
@@ -429,11 +417,6 @@ widgets:
           - "\u2586" # 60%
           - "\u2587" # 70%
           - "\u2588" # 80%+
-        label_shadow:
-          enabled: false
-          color: "black"
-          radius: 3
-          offset: [ 1, 1 ]
   notifications:
     type: "yasb.notifications.NotificationsWidget"
     options:
@@ -445,11 +428,6 @@ widgets:
         on_left: "toggle_notification"
         on_right: "do_nothing"
         on_middle: "toggle_label"
-      container_padding:
-        top: 0
-        left: 12
-        bottom: 0
-        right: 12
   microphone:
       type: "yasb.microphone.MicrophoneWidget"
       options:
@@ -471,11 +449,6 @@ widgets:
           on_left: "toggle_mic_menu"
           on_middle: "toggle_label"
           on_right: "toggle_mute"
-        label_shadow:
-          enabled: false
-          color: "black"
-          radius: 3
-          offset: [ 1, 1 ]
   home:
     type: "yasb.home.HomeWidget"
     options:
@@ -493,11 +466,6 @@ widgets:
       border_color: "System"
       offset_top: 10
       offset_left: 10
-      container_padding: 
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
       alignment: "left"
       direction: "down"
       menu_labels:
@@ -509,11 +477,6 @@ widgets:
        system: "Ustawienia"
        about: "O systemie"
        task_manager: "Menedżer zadań"
-      label_shadow:
-       enabled: false
-       color: "black"
-       radius: 2
-       offset: [ 1, 1 ]
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -535,7 +498,6 @@ widgets:
       thumbnail_padding: 100
       thumbnail_corner_radius: 50
       thumbnail_edge_fade: true
-      container_padding: {'top': 3, 'left': 12, 'bottom': 3, 'right': 0}
       scrolling_label:
         enabled: true
         update_interval_ms: 60
@@ -570,11 +532,6 @@ widgets:
         pause: "\ue769"
         prev_track: "\ue892"
         next_track: "\ue893"
-      label_shadow:
-        enabled: true
-        color: "#464646"
-        radius: 1
-        offset: [ 1, 1 ]
   clock:
       type: "yasb.clock.ClockWidget"
       options:
@@ -617,16 +574,6 @@ widgets:
           on_left: "toggle_calendar"
           on_middle: "toggle_label"
           on_right: "toggle_label"
-        label_shadow:
-          enabled: false
-          color: "black"
-          radius: 3
-          offset: [ 1, 1 ]
-        container_padding:
-          top: 0
-          left: 4
-          bottom: 0
-          right: 8
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
@@ -640,25 +587,18 @@ widgets:
       hide_if_offline: true
       animation: true
       offset_top: 10
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
-  weather:
-    type: "yasb.weather_localized.WeatherLocalizedWidget"
+  open_meteo:
+    type: "yasb.open_meteo.OpenMeteoWidget"
     options:
-      label: "<span>{icon}</span> {temp}, {feelslike}"
+      label: "<span>{icon}</span>{temp} (odcz. {feelslike})"
       label_alt: "\udb84\udcc3 {min_temp}, \udb84\udcc2 {max_temp}"
-      api_key: "1ef9d313a55c4164b76133933252005"
-      show_alerts: true
+      tooltip: true
       update_interval: 600
       hide_decimal: true
       units: "metric"
-      location: "Poland, Krakow"
-      locale: "en"
       callbacks:
         on_left: "toggle_card"
+        on_middle: "do_nothing"
         on_right: "toggle_label"
       icons:
         sunnyDay: "\ue30d"
@@ -669,18 +609,11 @@ widgets:
         rainyNight: "\ue333"
         snowyDay: "\ue30a"
         snowyNight: "\ue335"
-        blizzardDay: "\udb83\udf36"
-        blizzardNight: "\udb83\udf36"
         foggyDay: "\ue303"
         foggyNight: "\ue346"
         thunderstormDay: "\ue30f"
         thunderstormNight: "\ue338"
         default: "\uebaa"
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
       weather_card:
         blur: true
         round_corners: true
@@ -689,38 +622,32 @@ widgets:
         alignment: "right"
         direction: "down"
         icon_size: 64
-        show_hourly_forecast: true # Ustaw na False, aby wyłączyć prognozę godzinową
-        time_format: "24h" # może być 12h lub 24h
+        show_hourly_forecast: true
+        time_format: "24h"
         hourly_point_spacing: 76
-        hourly_icon_size: 32 # lepiej ustawić 16, 32 lub 64 dla lepszej jakości
-        icon_smoothing: true # powinno być true dla gładsszych ikon lub false dla ostrych ikon
-        temp_line_width: 2 # może być 0, aby ukryć linię temperatury
+        hourly_icon_size: 32
+        icon_smoothing: true
+        temp_line_width: 2
         current_line_color: "#8EAEE8"
-        current_line_width: 1 # może być 0, aby ukryć linię aktualnej godziny
+        current_line_width: 1
         current_line_style: "dot"
         hourly_gradient:
-            enabled: true
-            top_color: "#8EAEE8"
-            bottom_color: "#2A3E68"
-        hourly_forecast_buttons: # Opcjonalne przyciski przełączania typu prognozowania godzinowego
-            enabled: true # Ustaw na false, aby ukryć przyciski
-            default_view: "temperature" # Widok domyślny przy otwarciu karty pogody. Opcje: "temperature", "rain", "snow"
-            temperature_icon: "\udb81\udd99"
-            rain_icon: "\udb81\udd96"
-            snow_icon: "\udb81\udd98"
+          enabled: false
+          top_color: "#8EAEE8"
+          bottom_color: "#2A3E68"
+        hourly_forecast_buttons:
+          enabled: true
+          default_view: "temperature"
+          temperature_icon: "\udb81\udd99"
+          rain_icon: "\udb81\udd96"
+          snow_icon: "\udb81\udd98"
         weather_animation:
-            enabled: true
-            snow_overrides_rain: true
-            temp_line_animation_style: both # może być rain, snow, both lub none
-            rain_effect_intensity: 1.0 # 0.01 - 10.0
-            snow_effect_intensity: 1.0 # 0.01 - 10.0
-            scale_with_chance: true
-            enable_debug: false
-      label_shadow:
-        enabled: false
-        color: "black"
-        radius: 3
-        offset: [ 1, 1 ]
+          enabled: true
+          snow_overrides_rain: true
+          temp_line_animation_style: both
+          rain_effect_intensity: 1.0
+          snow_effect_intensity: 1.0
+          scale_with_chance: true
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
@@ -743,13 +670,7 @@ widgets:
         border_color: "System"
         alignment: "right"
         direction: "down"
-        distance: 6
         offset_top: 10
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
@@ -766,28 +687,17 @@ widgets:
         hibernate: ["\uf28e", "Hibernuj"]
         sleep: ["\u23fe", "Uśpij"]
         cancel: ["", "Anuluj"]
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:
       animation:
        enabled: true
        duration: 200
-       type: "fadeInOut"
       icon_size: 16
       ignore_apps:
         processes: []
         titles: []
         classes: []
-      container_padding:
-        top: 2
-        left: 0
-        bottom: 2
-        right: 0
       title_label:
         enabled: false
         show: "focused"
@@ -909,3 +819,13 @@ widgets:
               max_tokens: 4096
             - name: "gpt-3.5-turbo"
               label: "GPT3.5 Turbo"
+  copilot:
+      type: "yasb.copilot.CopilotWidget"
+      options:
+        label: "<span>\udb81\ude74</span>"
+        label_alt: "{used}/{allowance}"
+        token: ""
+        plan: "pro"
+        callbacks:
+          on_left: "toggle_popup"
+          on_right: "toggle_label"

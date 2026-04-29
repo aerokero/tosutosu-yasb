@@ -159,6 +159,37 @@
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+/* KOMOREBI-CONTROL Setting */
+.komorebi-control-widget .label {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 600;
+}
+.komorebi-control-menu {
+    background-color: var(--app-background);
+}
+.komorebi-control-menu .button {
+    color: rgba(162, 177, 199, 0.4);
+    padding: 8px 16px;
+    font-size: 32px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+.komorebi-control-menu .button.active {
+    color: rgb(228, 228, 228);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.komorebi-control-menu .button:disabled,
+.komorebi-control-menu .button.active:disabled {
+    background-color: rgba(255, 255, 255, 0.01);
+    color: rgba(255, 255, 255, 0.2);
+}
+.komorebi-control-menu .footer .text {
+    font-size: 12px;
+    color: #6c7086;
+}
+
 /* KOMOREBI-WORKSPACES Setting */
 
 .komorebi-workspaces .widget-container {
@@ -759,6 +790,176 @@
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* OPEN METEO Settings */
+.open-meteo-widget {
+	padding: 0 6px;
+}
+.open-meteo-widget .icon {
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.8);
+}
+.open-meteo-widget .label {
+	font-size: 13px;
+	font-family: "Segoe UI";
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.8);
+	padding-left: 4px;
+}
+.open-meteo-card {
+	background-color: rgba(27, 26, 26, 0.5);
+    min-width: 500px;
+}
+.open-meteo-card-today .label {
+	font-size: 13px;
+	font-family: "Segoe UI";
+	font-weight: 400;
+	color: rgb(163, 163, 163);
+}
+.open-meteo-card-today .label.location {
+	font-size: 32px;
+	font-weight: 700;
+	font-family: "Segoe UI";
+	color: rgb(255, 255, 255);
+}
+.open-meteo-card-today .label.sunrisesunset {
+	font-size: 18px;
+	font-family: "Segoe UI";
+	font-weight: 600;
+	color: rgb(201, 204, 159);
+}
+.open-meteo-card-today .label.sunrisesunset-icon {
+	font-size: 18px;
+	color: rgb(201, 204, 159);
+	font-family: "JetBrainsMono NFP";
+}
+.open-meteo-card-day {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0);
+	padding: 4px;
+	min-width: 70px;
+}
+.open-meteo-card-day .day-name {
+	font-family: "Segoe UI";
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 12px;
+	font-weight: 600;
+}
+.open-meteo-card-day .day-temp-max {
+	font-family: "Segoe UI";
+	font-weight: 700;
+	font-size: 16px;
+	color: rgb(255, 255, 255);
+}
+.open-meteo-card-day .day-temp-min {
+	font-family: "Segoe UI";
+	color: rgb(255, 255, 255);
+	font-weight: 400;
+	font-size: 13px;
+}
+.open-meteo-card-day.active {
+	background-color: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.open-meteo-card-day:hover {
+	background-color: rgba(255, 255, 255, 0.04);
+}
+.open-meteo-card .hourly-container {
+	border: none;
+	background-color: transparent;
+	min-height: 120px;
+}
+.open-meteo-card .hourly-data {
+	font-size: 11px;
+	font-weight: 700;
+	font-family: "Segoe UI";
+}
+.open-meteo-card .hourly-data.temperature {
+	background-color: #c9be48;
+}
+.open-meteo-card .hourly-data.rain {
+	background-color: #4a90e2;
+}
+.open-meteo-card .hourly-data.snow {
+	background-color: #a0c4ff;
+}
+.open-meteo-card .hourly-data .hourly-rain-animation {
+	color: rgba(150, 200, 255, 40);
+	background-color: rgba(0, 0, 0, 0);
+}
+.open-meteo-card .hourly-data .hourly-snow-animation {
+	color: rgba(255, 255, 255, 150);
+	background-color: rgba(0, 0, 0, 0);
+}
+.open-meteo-card .hourly-data-buttons {
+	margin-top: 11px;
+	margin-left: 11px;
+}
+.open-meteo-card .hourly-data-button {
+	border-radius: 4px;
+	min-height: 24px;
+	min-width: 24px;
+	max-width: 24px;
+	max-height: 24px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.3);
+	border: 1px solid transparent;
+}
+.open-meteo-card .hourly-data-button.active {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.open-meteo-card .search-head {
+	font-size: 18px;
+	font-family: "Segoe UI";
+	font-weight: 600;
+	color: rgba(255, 255, 255, 0.9);
+}
+.open-meteo-card .search-description {
+	font-size: 14px;
+	font-family: "Segoe UI";
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.7);
+	padding-bottom: 8px;
+}
+.open-meteo-card .no-data-icon {
+	font-size: 88px;
+}
+.open-meteo-card .no-data-text {
+	font-size: 16px;
+	font-family: "Segoe UI";
+	font-weight: 400;
+}
+/* search dialog */
+.open-meteo-card .search-input {
+	padding: 8px 12px;
+	border: 1px solid #5e6070;
+	border-radius: 6px;
+	background-color: rgba(17, 17, 27, 0.1);
+	color: #cdd6f4;
+	font-family: "Segoe UI";
+	font-size: 14px;
+}
+.open-meteo-card .search-input:focus {
+	border: 1px solid #89b4fa;
+	background-color: rgba(17, 17, 27, 0.2);
+}
+.open-meteo-card .search-results {
+	border: 1px solid #45475a00;
+	border-radius: 6px;
+	background-color: rgba(0, 0, 0, 0);
+	color: #cbced8;
+	font-size: 13px;
+	font-family: "Segoe UI";
+}
+.open-meteo-card .search-results::item {
+	padding: 6px;
+}
+.open-meteo-card .search-results::item:hover {
+	background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* TASKBAR Settings */
@@ -1793,6 +1994,118 @@ Example: "Windows Media" becomes "windows-media" */
     color: #818181;
 }
 
+/* COPILOT Settings */
+.copilot-widget {
+}
+.copilot-widget .icon {
+    font-size: 14px;
+    padding-right: 2px;
+    color: #ffffff;
+}
+.copilot-widget .label.warning,
+.copilot-widget .icon.warning {
+    color: #f9e2af; /* Zgodne z ostrzeżeniami w Todo (today) */
+}
+.copilot-widget .label.critical,
+.copilot-widget .icon.critical {
+    color: #ff583b; /* Zgodne z błędami/pilnymi w Todo (urgent) */
+}
+
+/* Copilot Menu */
+.copilot-menu {
+    background-color: var(--app-background);
+    min-width: 320px;
+}
+.copilot-menu .header {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    padding: 12px 12px;
+    margin-left: 80px;
+    color: white;
+}
+.copilot-menu .section {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin: 4px 8px;
+    padding: 8px;
+}
+.copilot-menu .spending-section {
+    display: none;
+}
+.copilot-menu .section.progress-section {
+    background-color: transparent;
+    border: none;
+    padding: 0 8px;
+}
+.copilot-menu .section-title {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-family: 'Segoe UI';
+}
+.copilot-menu .section.progress-section .section-title {
+    margin-bottom: 4px;
+}
+.copilot-menu .progress-bar {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding-left: 30px;
+}
+.copilot-menu .progress-bar .fill {
+    background-color: #0f91e7; /* Zgodne z niebieskim z Launchpad/Todo */
+    border-radius: 4px;
+    padding-left: 30px;
+}
+.copilot-menu .progress-bar.warning .fill { background-color: #f9e2af; }
+.copilot-menu .progress-bar.critical .fill { background-color: #ff583b; }
+
+.copilot-menu .usage-count,
+.copilot-menu .usage-percent,
+.copilot-menu .reset-date,
+.copilot-menu .stat-label,
+.copilot-menu .stat-value,
+.copilot-menu .model-name,
+.copilot-menu .model-count {
+    color: #a6adc8;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    font-size: 12px;
+}
+.copilot-menu .stat-row.total .stat-value {
+    color: #7fffd4; /* Zgodne z soon w Todo */
+}
+.copilot-menu .progress-bar.model-0 .fill { background-color: #0f91e7; }
+.copilot-menu .progress-bar.model-1 .fill { background-color: #8b5cf6; }
+.copilot-menu .progress-bar.model-2 .fill { background-color: #ec4899; }
+.copilot-menu .progress-bar.model-3 .fill { background-color: #f9e2af; }
+.copilot-menu .progress-bar.model-4 .fill { background-color: #10b981; }
+
+.copilot-menu .usage-chart {
+    color: #0f91e7;
+}
+
+.copilot-menu .error-section {
+    background: transparent;
+    border: none;
+    padding: 32px 0;
+}
+.copilot-menu .error-icon,
+.copilot-menu .empty-icon {
+    color: #666666;
+    font-size: 64px;
+}
+.copilot-menu .error-message,
+.copilot-menu .empty-message {
+    color: #a6adc8;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
+    padding-bottom: 32px;
+}
+
 /* === Global rounding reset (keeps existing colors) === */
 .brightness-widget,
 .bluetooth-widget,
@@ -1811,11 +2124,14 @@ Example: "Windows Media" becomes "windows-media" */
 .taskbar-widget,
 .home-widget,
 .komorebi-active-layout,
+.komorebi-control-widget,
 .komorebi-workspaces,
 .language-widget,
 .active-window-widget,
 .cava-widget,
-.ai-chat-widget {
+.open-meteo-widget,
+.ai-chat-widget,
+.copilot-widget {
     background-color: var(--widget-background);
     border: 0;
     border-radius: 12px;
@@ -1851,12 +2167,15 @@ Example: "Windows Media" becomes "windows-media" */
 .todo-widget .widget-container,
 .taskbar-widget .widget-container,
 .home-widget .widget-container,
+.komorebi-control-widget .widget-container,
 .komorebi-active-layout .widget-container,
 .komorebi-workspaces .widget-container,
 .language-widget .widget-container,
 .active-window-widget .widget-container,
+.open-meteo-widget .widget-container,
 .cava-widget .widget-container,
 .ai-chat-widget .widget-container,
+.copilot-widget .widget-container,
 .clock-widget .widget-container {
     background-color: transparent;
     border: 0;
@@ -1871,6 +2190,13 @@ Example: "Windows Media" becomes "windows-media" */
     border-radius: 0;
     margin: 0;
     max-width: 72px;
+    min-width: 100px;
+}
+.open-meteo-widget .widget-container {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
     min-width: 100px;
 }
 .volume-widget .widget-container {
