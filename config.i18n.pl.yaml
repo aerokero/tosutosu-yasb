@@ -656,7 +656,6 @@ widgets:
       hide_decimal: true
       units: "metric"
       location: "Poland, Krakow"
-      lang: "pl"
       callbacks:
         on_left: "toggle_card"
         on_right: "toggle_label"
@@ -704,14 +703,14 @@ widgets:
             bottom_color: "#2A3E68"
         hourly_forecast_buttons: # Opcjonalne przyciski przełączania typu prognozowania godzinowego
             enabled: true # Ustaw na false, aby ukryć przyciski
-            default_view: "temperatura" # Widok domyślny przy otwarciu karty pogody. Opcje: "temperatura", "opady", "śnieg"
+            default_view: "temperature" # Widok domyślny przy otwarciu karty pogody. Opcje: "temperature", "rain", "snow"
             temperature_icon: "\udb81\udd99"
             rain_icon: "\udb81\udd96"
             snow_icon: "\udb81\udd98"
         weather_animation:
             enabled: true
             snow_overrides_rain: true
-            temp_line_animation_style: both # może być "rain", "snow", "both" lub "none"
+            temp_line_animation_style: both # może być rain, snow, both lub none
             rain_effect_intensity: 1.0 # 0.01 - 10.0
             snow_effect_intensity: 1.0 # 0.01 - 10.0
             scale_with_chance: true
