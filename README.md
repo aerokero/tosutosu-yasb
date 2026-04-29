@@ -52,16 +52,29 @@ The custom widget extends YASB's built-in weather widget and translates weather 
 
 ### Setup
 
-1. **Copy the widgets folder** to your YASB installation (next to your `config.yaml`).
-2. **Enable in config** — the provided configs already use it:
+1. **Locate your YASB installation directory** — typically where `yasb` command runs or installed site-packages
+   ```bash
+   # Find YASB location
+   python -c "import yasb; print(yasb.__path__)"
+   ```
+
+2. **Copy the widget and locales**:
+   ```bash
+   # From this repository
+   cp widgets/weather_localized.py <YASB>/src/core/widgets/yasb/
+   cp -r locales <YASB>/
+   ```
+
+3. **Enable in config** — use any of the provided configs which already use it:
    ```yaml
    weather:
-     type: "widgets.weather_localized.WeatherLocalizedWidget"
+     type: "yasb.weather_localized.WeatherLocalizedWidget"
      options:
        locale: "pl"  # or "en"
        # ... other weather options
    ```
-3. **Restart YASB** — the widget will load and use locale translations from `locales/<lang>.json`.
+
+4. **Restart YASB** — the widget will load and use locale translations from `locales/<lang>.json`.
 
 ### Supported Languages
 
