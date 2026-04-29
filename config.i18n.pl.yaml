@@ -656,6 +656,7 @@ widgets:
       hide_decimal: true
       units: "metric"
       location: "Poland, Krakow"
+      lang: "pl"
       callbacks:
         on_left: "toggle_card"
         on_right: "toggle_label"
