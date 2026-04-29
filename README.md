@@ -31,6 +31,19 @@ Do not commit your machine-specific `launchpad/apps.json`. Instead, copy `launch
 
 See `CHANGELOG.md` for upgrade notes.
 
+## Localization
+
+This repository includes a small starter i18n helper to keep widget strings consistent across languages.
+
+- Translations live in `i18n/translations.json`.
+- To generate a localized copy of `config.yaml`, run:
+
+```bash
+python scripts/apply_i18n.py en
+```
+
+This produces `config.i18n.en.yaml`. The script performs simple replacements for known widget strings (starter set). Edit `i18n/translations.json` to add or tweak translations.
+
 ## Contribute
 Suggestions, icon updates, and improvements are welcome via GitHub Issues or Pull Requests.
 

@@ -1,0 +1,22 @@
+{
+  "notes_label": {
+    "en": "Notatki: {count}",
+    "pl": "Notatki: {count}"
+  },
+  "pomodoro_session": {
+    "en": "Session {session}/{total_sessions} - {status}",
+    "pl": "Sesja {session}/{total_sessions} - {status}"
+  },
+  "no_bluetooth": {
+    "en": " No connected devices ",
+    "pl": " Brak podłączonych urządzeń "
+  },
+  "brightness_label": {
+    "en": "Brightness {percent}%",
+    "pl": "Jasność {percent}%"
+  },
+  "wifi_label": {
+    "en": "Wi-Fi: {wifi_name} {wifi_strength}%",
+    "pl": "Wi-Fi: {wifi_name} {wifi_strength}%"
+  }
+}
