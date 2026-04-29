@@ -44,6 +44,36 @@ Choose from pre-configured language variants:
 
 To add a new language variant, copy `config.yaml`, customize the widget labels for your language, and commit it as `config.i18n.<lang>.yaml`.
 
+## Custom Localized Weather Widget
+
+This theme includes a **custom weather widget** with multi-language support (`widgets/weather_localized.py`).
+
+The custom widget extends YASB's built-in weather widget and translates weather descriptions based on the configured locale.
+
+### Setup
+
+1. **Copy the widgets folder** to your YASB installation (next to your `config.yaml`).
+2. **Enable in config** — the provided configs already use it:
+   ```yaml
+   weather:
+     type: "widgets.weather_localized.WeatherLocalizedWidget"
+     options:
+       locale: "pl"  # or "en"
+       # ... other weather options
+   ```
+3. **Restart YASB** — the widget will load and use locale translations from `locales/<lang>.json`.
+
+### Supported Languages
+
+- **en** — English
+- **pl** — Polish
+
+### Adding a Language
+
+1. Create `locales/<lang>.json` with weather condition translations
+2. Update config to use `locale: "<lang>"`
+3. Restart YASB
+
 ## Contribute
 Suggestions, icon updates, and improvements are welcome via GitHub Issues or Pull Requests.
 

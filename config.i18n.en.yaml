@@ -646,7 +646,7 @@ widgets:
         bottom: 0
         right: 8
   weather:
-    type: "yasb.weather.WeatherWidget"
+    type: "widgets.weather_localized.WeatherLocalizedWidget"
     options:
       label: "<span>{icon}</span> {temp}, {feelslike}"
       label_alt: "\udb84\udcc3 {min_temp}, \udb84\udcc2 {max_temp}"
@@ -656,6 +656,7 @@ widgets:
       hide_decimal: true
       units: "metric"
       location: "Poland, Krakow"
+      locale: "en"
       callbacks:
         on_left: "toggle_card"
         on_right: "toggle_label"

@@ -646,7 +646,7 @@ widgets:
         bottom: 0
         right: 8
   weather:
-    type: "yasb.weather.WeatherWidget"
+    type: "widgets.weather_localized.WeatherLocalizedWidget"
     options:
       label: "<span>{icon}</span> {temp}, {feelslike}"
       label_alt: "\udb84\udcc3 {min_temp}, \udb84\udcc2 {max_temp}"
@@ -656,6 +656,7 @@ widgets:
       hide_decimal: true
       units: "metric"
       location: "Poland, Krakow"
+      locale: "en"
       callbacks:
         on_left: "toggle_card"
         on_right: "toggle_label"
@@ -688,29 +689,29 @@ widgets:
         alignment: "right"
         direction: "down"
         icon_size: 64
-        show_hourly_forecast: true # Set to False to disable hourly forecast
-        time_format: "24h" # can be 12h or 24h
+        show_hourly_forecast: true # Ustaw na False, aby wyłączyć prognozę godzinową
+        time_format: "24h" # może być 12h lub 24h
         hourly_point_spacing: 76
-        hourly_icon_size: 32 # better to set 16, 32 or 64 for better quality
-        icon_smoothing: true # should be true for smoother icon or false for sharper icon if using 16, 32 or 64 for hourly_icon_size
-        temp_line_width: 2 # can be 0 to hide the temperature line
+        hourly_icon_size: 32 # lepiej ustawić 16, 32 lub 64 dla lepszej jakości
+        icon_smoothing: true # powinno być true dla gładsszych ikon lub false dla ostrych ikon
+        temp_line_width: 2 # może być 0, aby ukryć linię temperatury
         current_line_color: "#8EAEE8"
-        current_line_width: 1 # can be 0 to hide the current hour line
+        current_line_width: 1 # może być 0, aby ukryć linię aktualnej godziny
         current_line_style: "dot"
         hourly_gradient:
             enabled: true
             top_color: "#8EAEE8"
             bottom_color: "#2A3E68"
-        hourly_forecast_buttons: # Optional hourly forecast data type toggle buttons, default disabled
-            enabled: true # Set to false to hide the buttons
-            default_view: "temperature" # Default view when opening the weather card. Options: "temperature", "rain", "snow"
+        hourly_forecast_buttons: # Opcjonalne przyciski przełączania typu prognozowania godzinowego
+            enabled: true # Ustaw na false, aby ukryć przyciski
+            default_view: "temperature" # Widok domyślny przy otwarciu karty pogody. Opcje: "temperature", "rain", "snow"
             temperature_icon: "\udb81\udd99"
             rain_icon: "\udb81\udd96"
             snow_icon: "\udb81\udd98"
         weather_animation:
             enabled: true
             snow_overrides_rain: true
-            temp_line_animation_style: both # can be "rain", "snow", "both", or "none"
+            temp_line_animation_style: both # może być rain, snow, both lub none
             rain_effect_intensity: 1.0 # 0.01 - 10.0
             snow_effect_intensity: 1.0 # 0.01 - 10.0
             scale_with_chance: true
