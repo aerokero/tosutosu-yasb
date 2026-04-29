@@ -76,13 +76,13 @@ bars:
     widgets:
       left: [
         "home",
+        "media",
         "launchpad",
         # "komorebi_workspaces",
         "disk",
-        "whkd",
         "komorebi_control",
         "komorebi_active_layout",
-        "media",
+        "whkd",
         "pomodoro"
       ]
       center: [
